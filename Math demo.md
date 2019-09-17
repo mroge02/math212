@@ -9,11 +9,11 @@ $$y''+2xy=\arctan x \tag{1}$$
 Alignment:
 
 $$\begin{aligned}
-A &= B \\
+y''+2xy &= B \\
  &= C \\
 \end{aligned}$$
 
-Piecewise functions:
+Piecewise functions %
 
 $$
 |x| =
@@ -36,5 +36,5 @@ StreamPlot[{d\[Theta], -Sin[\[Theta]]}, {\[Theta], -8,
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1Nzk0ODQ0Nl19
+eyJoaXN0b3J5IjpbODE3NzM0NTMxXX0=
 -->
