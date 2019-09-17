@@ -24,6 +24,8 @@ x & \text{if } x \ge 0. \\ % the last \\ may be omitted
 
 ## Phase space
  
+ 
+ 
  The phase space of an autonomous ODE consists of all the possible values of the data that determines the state of the system at a given time. In other words, it consists of all possible (complete) initial conditions. For the second-order ODE $\ddot\theta = - \sin\theta$, phase space consists of a Cartesian plane of $(\theta, \dot\theta)$ pairs:
 ```mathematica
 StreamPlot[{d\[Theta], -Sin[\[Theta]]}, {\[Theta], -8, 
@@ -36,5 +38,5 @@ StreamPlot[{d\[Theta], -Sin[\[Theta]]}, {\[Theta], -8,
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE3NzM0NTMxXX0=
+eyJoaXN0b3J5IjpbMTk4NjQzMjg5OSw4MTc3MzQ1MzFdfQ==
 -->
