@@ -18,3 +18,6 @@ This is an ODE with an equation number <code>\tag</code>:<br>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE1NjgwNzIzMTVdfQ==
+-->
