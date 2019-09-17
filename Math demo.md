@@ -18,3 +18,6 @@ StreamPlot[{d\[Theta], -Sin[\[Theta]]}, {\[Theta], -8,
 ](https://lh3.googleusercontent.com/LwW0EHIP7y3nyNL4tjt-rRPTN5Fk4ppsplgu_kORQzR2njcCDe340jR3H9zKMCzgRhzGOxSf2DOX "Phase space of a pendulum")
 
 > Written with [StackEdit](https://stackedit.io/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTY1ODM3MjZdfQ==
+-->
