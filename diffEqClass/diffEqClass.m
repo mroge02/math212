@@ -20,19 +20,20 @@
 
 
 (* :Title: diffEqClass.m-- A package for differential equations *)
-(* :Context: diffEqClass`*)
+(* :Context: diffEqClass` *)
 (* :Author: Michael Rogers *)
 (* :Summary: Provides support for teaching and learning diff. eq. *)
 (* :Copyright: \[Copyright]2019 by Michael Rogers *)
-(* :Package Version: 1.0 *)
+(* :Package Version: 0.2.22 *)
 (* :Mathematica Version: 12.0 *)
 (* :History:
-	1.0 June 2019 
+	0.2 September 2019 
+	0.1 August 2019 
 	Started as math212`, a package for Diff. Eq. course
 *)
-(* :Keywords: differential equations, *)
+(* :Keywords: differential equations, education *)
 (* :Sources:
-    Roman E.Maeder.Programming in Mathematica,3rd ed.Addison-Wesley,1996.
+    TBD
 *)
 (* :Warnings: None yet *)
 (* :Limitations: All yet *)
@@ -96,7 +97,10 @@ toImplicitSolution,
 LieD,
 LieDerivative,
 totalD,
-vectorPlot1D
+vectorPlot1D,
+plotSeparatrices,
+stabilityTrajectories,
+diffEqDemo
 ];
 PrependTo[$ContextPath,"diffEqClass`utilities`"];
 
@@ -148,6 +152,8 @@ betweenQ,
 coefficients,
 singularities,
 equilibria,
+getStoppingEvents,
+findIMIE, (* find integer matrices with integer eigenvalues *)
 TBD,db (* throws TBD error, debug print *)
 ];
 
@@ -682,7 +688,8 @@ SetAttributes[trapezoidRulePlot,HoldAll];
 SetAttributes[simpsonsRulePlot,HoldAll];
 
 vectorPlot1D::usage="vectorPlot1D[v, {x, a, b}] plots phase vector field of the differential equation x' = v(x)";
-portrait1D::usage="portrait1D[ode, {x, x1, x2},{t, t1, t2}] plots phase portrait/solutions for first-order ode in terms of x'(t), x(t)";
+portrait1D::usage="portrait1D[ode, {x, x1, x2}, {t, t1, t2}] plots phase portrait/solutions for an autonomous first-order ode in terms of x'[t], x[t)]";
+polarPortrait1D::usage="polarPortrait1D[ode, {r, r1, r2}, {t, t1, t2}] plots integral curves of direction field for an autonomous first-order ode in polar coordinates";
 
 midpointRulePlot::usage="midpointRulePlot[f, n, {t, a, b}] draws the figure for the midpoint rule for \!\(\*SubsuperscriptBox[\(\[Integral]\), \(a\), \(b\)]\)f(t) dt with n steps";
 trapezoidRulePlot::usage="trapezoidRulePlot[f, n, {t, a, b}] draws the figure for the trapezoid rule for \!\(\*SubsuperscriptBox[\(\[Integral]\), \(a\), \(b\)]\)f(t) dt with n steps";
@@ -694,6 +701,8 @@ secantList::usage="secantList[f, a, b, n] returns a list of n approximations {{a
 newtonList::usage="newtonList[f, a, n] returns a list of n approximations {a1, a2, ...} to the root of f";
 
 showExample::usage="showExample[title_,heading_,instructions_,code_,extra_]";
+
+lamereyStairs::usage="lamereyStairs[f_,a0_,n_]"
 
 
 polarToCartestian::usage="conversion Rule";
@@ -859,6 +868,38 @@ portrait1D[ode_Equal,{fn_,x1_,x2_},{time_,t1_,t2_}]:=
 
 (* ::Input::Initialization:: *)
 (*
+ * Polar direction field portrait
+* alternative APIs TBD ???
+ *)
+polarPortrait1D[ode_Equal,{fn_,r1_,r2_},{time_,t1_,t2_},opts:OptionsPattern@PolarPlot]:=Block[{portrait`stationaryPts,portrait`intervals,plotrange=r2,padding={0.1,(r2-r1) {0.03,0.02}},vf}
+,vf=First[derivativesToVariables[odeToVF[ode,{fn},time],{fn}]]/.fn[0]->fn
+;portrait`init[vf,{fn,r1,r2}]
+;((portrait`initQ[]=False;#1)&)[
+Module[{eqns,x0}
+,eqns={
+ode,
+fn[t1]==x0, (* IC *)
+Table[
+With[{r0=r0},WhenEvent[Abs[fn[time]-r0]<1*^-3,"StopIntegration"]],
+{r0,portrait`stationaryPts}]}
+;With[
+{psol=ParametricNDSolveValue[eqns,fn,{time,t1,t2},{x0},
+"ExtrapolationHandler"->{Indeterminate&,"WarningMessage"->False}]}
+,PolarPlot[
+Evaluate@Flatten[List[
+ConditionalExpression[#,t1<=time<=t1+2Pi]&/@DeleteDuplicates@portrait`stationaryPts,
+Quiet[(psol[#1]@(time)&)/@(If[(vf/.fn->Mean[#1])>0,{0.9,0.1}.#1,{0.1,0.9}.#1]&)/@portrait`intervals]]],
+{time,t1,t2},
+opts,
+PlotRange->plotrange,PlotRangePadding->padding,Ticks->None,ExclusionsStyle->None,PlotLabel->ode]/.l_Line:>{Arrowheads[PadRight[{0.},1+Ceiling[2/r2*ArcLength@l],0.04]],Arrow@@l}
+]
+]
+]
+];
+
+
+(* ::Input::Initialization:: *)
+(*
  * Interactive example button action
  *   Creates notebook window with code
  *)
@@ -874,7 +915,8 @@ WindowTitle->title,
 WindowSize->All,
 Background->LightBlue,
 Saveable->False,
-ScreenStyleEnvironment->"InteractiveExample",StyleDefinitions->FileNameJoin[{NotebookDirectory[],"Diff Eq Style.nb"}]];
+ScreenStyleEnvironment->"InteractiveExample",
+StyleDefinitions->StyleDefinitions->FrontEnd`FileName[{"diffEqClass"},"Diff Eq Style.nb",CharacterEncoding->"UTF-8"]];
 showExample[title_,heading_,instructions_,code_,extra_]:=
 showExample[title,heading,Flatten@{instructions},code,Flatten@{extra}];
 
@@ -924,7 +966,8 @@ Plot[{f,f2},{t,a,b},opts]
 
 (*
  * startEvent
- *   Integrates a DE until a condition is reached; then restarts and returns the rest of the integration
+ *   Integrates a DE until a condition is reached
+ *   then restarts and returns the rest of the integration
  *)
 SetAttributes[startEvent,HoldAll];
 startEvent[evt_,ndsolve_[de_,vars_,{t_,a_,b_},rest__]] :=
@@ -950,6 +993,16 @@ Options[newtonList]={WorkingPrecision->Automatic};newtonList[f_,a_?NumericQ,n_In
 If[NumericQ[OptionValue[WorkingPrecision]]||OptionValue[WorkingPrecision]===MachinePrecision,SetPrecision[a,OptionValue[WorkingPrecision]],a],n]
 ];
 
+
+
+(* ::Input::Initialization:: *)
+(* TBD: lamereyStairs is ok as a utility, but needs a better user interface. ??? *)
+lamereyStairs[f_,a0_,n_]:=Module[{h=Arrow},
+(h=h/.{Arrow->Line,Line->Arrow})[#]&/@
+Partition[
+Transpose[{Most[#],Rest[#]}]&@Riffle[#,#]&@NestList[f,a0,n],
+2,1]
+];
 
 
 End[];
@@ -1139,6 +1192,31 @@ getCommand[{de:diffEq[asc_],type:"portrait"|"contact",dom_List},opts_]:=Module[{
 (*checkSol@runCode[code,"returnCode"/.Flatten@{opts}//TrueQ]*)
 ];
 
+(* First order contact portrait
+* sampling points for contact planes
+ *)
+getContactFieldPoints[ode_,{x_,x1_,x2_},{y_,y1_,y2_},{p_,p1_,p2_}]:=
+Module[
+{cp,pts,bdynf,cpts,iter,mindist},
+(* generate oversampling *)
+cp=ContourPlot3D[x p-y==y^2,{x,x1,x2},{y,y1,y2},{p,p1,p2},
+MaxRecursion->1,Mesh->None,AxesLabel->Automatic];
+(* extract points *)
+pts=Flatten[Cases[cp,GraphicsComplex[pp_,__]:>pp,Infinity],1];
+(* delete neighboring points *)
+bdynf=Nearest@Flatten[(* distance is a problem if axes scales differ greatly *)
+Cases[cp,Line[l_]:>pts[[l]],Infinity],
+1];
+mindist=Min[x2-x1,y2-y1,p2-p1]/10; (* distance is a problem *)
+cpts=DeleteCases[pts,pt_/;Length@bdynf[pt,{Infinity,0.55mindist}]>0];
+iter=1;
+While[Length@cpts>iter,
+cpts=DeleteCases[cpts,Alternatives@@Rest@Nearest[cpts,cpts[[iter]],{Infinity,mindist}]];
+iter++
+];
+cpts
+];
+
 
 
 (* ::Input::Initialization:: *)
@@ -1212,13 +1290,15 @@ $commandSynonyms=<|
 "contactplot"->"contact"
 |>;
 $inGetCommand=False;
-getSynonym[cmd_]:=Lookup[$commandSynonyms,StringDelete[ToLowerCase[cmd],WhitespaceCharacter]];
+getSynonym[cmd_]:=(* TBD: deprecate *)Lookup[$commandSynonyms,StringDelete[ToLowerCase[cmd],WhitespaceCharacter]];
+getSynonym[thesaurus_,cmd_]:=Lookup[thesaurus,StringDelete[ToLowerCase[cmd],WhitespaceCharacter]];
 getCommand[{de_diffEq,cmd1_String,cmd2_String,args___},opts_]/;!TrueQ[$inGetCommand]:=
-With[{new1=getSynonym[cmd1],new2=getSynonym[cmd2]},
+With[{new1=getSynonym[$commandSynonyms,cmd1],(* TBD: check ??? *)
+new2=getSynonym[$commandSynonyms,cmd2]},(* TBD: check ??? *)
 Block[{$inGetCommand=True},getCommand[{de,new1,new2,args},opts]]/;!MissingQ[new1]&&!MissingQ[new2]
 ];
 getCommand[{de_diffEq,cmd_String,args___},opts_]/;!TrueQ[$inGetCommand]:=
-With[{new=getSynonym[cmd]},
+With[{new=getSynonym[$commandSynonyms,cmd]},(* TBD: check ??? *)
 Block[{$inGetCommand=True},getCommand[{de,new,args},opts]]/;!MissingQ[new]
 ];
 
@@ -1371,9 +1451,14 @@ getDefaultProblemType[de_diffEq,"exact"]:=Lookup[de,"bcs"]/.{_Missing->"general"
 (* ::Input::Initialization:: *)
 (* checks call & solution to add interpretive messages *)
 diffEq::ImplSol="DSolve was unable to solve for the unknown explicitly; an implicit solution has been returned.";
-diffEq::IFnSol="DSolve was unable to solve for the inverse of a function; a solution in terms of Button[InverseFunction, Inherited, BaseStyle -> "Link", ButtonData -> "paclet:ref/InverseFunction"] has been returned; you can apply toImplicitSolution[sol] to convert the \"solution\" sol to an implicit solution.";
-diffEq::RootSol="A solution in terms of Button[Root, Inherited, BaseStyle -> "Link", ButtonData -> "paclet:ref/Root"] has been returned, which is a way Mathematica can represent solutions to certain equations; you can apply toImplicitSolution[sol] to convert it to an implicit solution.";
-diffEq::IntSol="DSolve was unable to solve one or more integrals in the solution; the solution has been returned in terms of Button[Inactive, Inherited, BaseStyle -> "Link", ButtonData -> "paclet:ref/Inactive"] integrals.";
+(*
+diffEq::IFnSol="DSolve was unable to solve for the inverse of a function; a solution in terms of InverseFunction has been returned; you can apply toImplicitSolution[sol] to convert the \"solution\" sol to an implicit solution.";
+diffEq::RootSol="A solution in terms of Root has been returned, which is a way Mathematica can represent solutions to certain equations; you can apply toImplicitSolution[sol] to convert it to an implicit solution.";
+diffEq::IntSol="DSolve was unable to solve one or more integrals in the solution; the solution has been returned in terms of Inactive integrals.";
+*)
+diffEq::IFnSol="DSolve was unable to solve for the inverse of a function; a solution in terms of InverseFunction has been returned; you can apply toImplicitSolution[sol] to convert the \"solution\" sol to an implicit solution.";
+diffEq::RootSol="A solution in terms of Root has been returned, which is a way Mathematica can represent solutions to certain equations; you can apply toImplicitSolution[sol] to convert it to an implicit solution.";
+diffEq::IntSol="DSolve was unable to solve one or more integrals in the solution; the solution has been returned in terms of Inactive integrals.";
 diffEq::Unsolved="`` was unable to solve the differential equation; returning code used.";
 diffEq::NoSol="`` returned no solution.";
 
@@ -2446,6 +2531,420 @@ Begin["`diffEqDump`"];
 
 (* ::Input::Initialization:: *)
 End[];(* "`diffEqDump`" *)
+
+
+(* ::Input::Initialization:: *)
+Begin["`diffEqDump`"];
+
+
+(* ::Input::Initialization:: *)
+(* plot separatrices (2x2 real system only) *)
+ClearAll[plotSeparatrices,getStoppingEvents];
+SetAttributes[getStoppingEvents,Listable];
+(* default value: need x, y, t variable names so we create a Function template *)
+Options@getStoppingEvents={
+"Variables"->{#1,#2,#3},(* syntax: "Variables"\[Rule]{x,y,t} *)
+"Equilibrium"->{0.,0.},
+"BoundingBox"->{{-1.,1.},{-1.,1.}}}; (* syntax: "BoundingBox"\[Rule]{{x[t],x1,x2},{y[t],y1,y2}} *)
+getStoppingEvents::badcrit="\"StoppingCriterion\" `` not of \"BoundingBox\", \"Norm\"\[Rule]n, \"Condition\"->criteria. Criterion ignored.";
+getStoppingEvents[crit_,opts:OptionsPattern[]]:=With[
+{vars=Most@OptionValue["Variables"],varst=OptionValue["Variables"]/.{x_,y_,t_}:>{x[t],y[t]}},
+Switch[crit,
+"BoundingBox"|Automatic
+,WhenEvent[#,"StopIntegration"]&/@(Abs[#1-Mean[{#2,#3}]]==(#3-#2)/2&@@@MapThread[Prepend,{OptionValue["BoundingBox"],varst}]),
+"Norm"->_?NumericQ
+,WhenEvent[#,"StopIntegration"]&@(Norm[varst-OptionValue["Equilibrium"]]==Last@crit),
+"Condition"->_List
+,getStoppingEvents[#,opts]&/@Last@crit,
+"Condition"->_
+,WhenEvent[#,"StopIntegration"]&@(Last@crit/.Thread[varst->varst]~Join~Thread[vars->varst] (* explanation? *)
+),
+_
+,
+Message[getStoppingEvents::badcrit,crit];
+{}
+]/;Length@OptionValue["Variables"]==3 (* TBD: error message *)
+];
+Options@plotSeparatrices={"StoppingCriterion"->"BoundingBox"};
+plotSeparatrices[F_,xi:{x_,x1_,x2_},yi:{y_,y1_,y2_},eq_,OptionsPattern[]]:=Module[{(*evecs,evals,*)esys,vars,t,stopevents,sep},
+(* TDB: check syntax of varspec *)
+(* TBD: check length of varspec equals length of eq *)
+vars={x,y};
+(*{evals,evecs}=*)murf=esys=Eigensystem[D[F,{vars}]/.Thread[vars->eq]//N];
+If[MatchQ[esys[[1,1]],_Complex],esys={}];
+stopevents=getStoppingEvents[Flatten@List@OptionValue["StoppingCriterion"],
+"Variables"->{x,y,t},
+"Equilibrium"->eq,
+"BoundingBox"->{{x1,x2},{y1,y2}}
+];
+If[stopevents==={},(* happens if user messes up; return nothing? *)
+stopevents=getStoppingEvents[Automatic,
+"Variables"->{x,y,t},
+"Equilibrium"->eq,
+"BoundingBox"->{{x1,x2},{y1,y2}}
+]
+];
+sep=Flatten[
+Quiet[
+MapThread[
+Function[{eval,evec},
+{NDSolveValue[
+Rationalize[
+{D[Through[vars@t],t]==(F/.v:Alternatives@@vars:>v[t]),
+Through[vars@0]==eq+Sqrt@$MachineEpsilon*evec,
+stopevents},
+0],
+vars,
+{t,0,Sign[eval]Infinity},WorkingPrecision->32],
+NDSolveValue[
+Rationalize[
+{D[Through[vars@t],t]==(F/.v:Alternatives@@vars:>v[t]),
+Through[vars@0]==eq-Sqrt@$MachineEpsilon*evec,
+stopevents},
+0],
+vars,
+{t,0,Sign[eval]Infinity},WorkingPrecision->32]}
+],
+esys],
+{NDSolveValue::ndsz,LinearSolve::nosol}],
+1];
+sep=DeleteCases[sep,sol_?(!FreeQ[#,NDSolveValue]&)];
+Graphics@Map[
+Function[{sol},
+Arrow@Transpose@Through[sol@"ValuesOnGrid"]
+],
+sep
+]
+];
+
+
+(* ::Input::Initialization:: *)
+ClearAll[stabilityTrajectories];
+SetAttributes[stabilityTrajectories,HoldFirst];
+stabilityTrajectories[F_,xi:{x_,x1_,x2_},yi:{y_,y1_,y2_},eq_List,rad_,rstab_,npts_:12]:=Module[{state,newstate,t,stable=0},
+state=First@NDSolve`ProcessEquations[{{x'[t],y'[t]}==(F/.{z:_[t]:>z,v:x|y:>v[t]}),
+Thread[{x[0],y[0]}==eq],
+getStoppingEvents[{"BoundingBox","Norm"->rstab/1*^4},
+"Variables"->{x,y,t},
+"Equilibrium"->eq,
+"BoundingBox"->{{x1,x2},{y1,y2}}
+]},
+{x,y},
+{t,0,Infinity},MaxSteps->1000];
+Graphics[{
+Table[
+{First@p,(*color*)
+Point@Last@p,
+newstate=First@NDSolve`Reinitialize[state,Thread[{x[0],y[0]}==Last@p]];
+Quiet[NDSolve`Iterate[newstate,Infinity],NDSolve`Iterate::mxst];
+With[{xy=Through[Values[NDSolve`ProcessSolutions[newstate]]["ValuesOnGrid"]]},
+stable+=Total@UnitStep[Total[xy^2]-rstab^2];
+Line@Transpose@xy
+]},
+{p,Transpose@{ColorData[97]/@Range@npts,CirclePoints[eq,rad,npts]}}
+],
+Gray,Circle[eq,rad],If[stable==0,Darker@Green,Red],Thick,Circle[eq,rstab],Point[eq]
+}]
+]
+
+
+(* ::Input::Initialization:: *)
+$diffEqDemos=<|
+"equilibrium"->equilibriumDemo,
+"lyapunov"->lyapunovFunctionExplorer,
+"lyapunov3d"->lyapunovFunctionExplorer3D,
+"stability"->({"equilibrium","lyapunov","lyapunov3d"}&) (* class of demos *)
+|>;
+$demoThesaurus=AssociationThread[Keys@$diffEqDemos->Keys@$diffEqDemos]~Join~
+<|
+(*"equilibrium"\[Rule]"equilibrium",*)
+"criticalpoint"->"equilibrium",
+(*"lyapunov"\[Rule]"lyapunov",*)
+"liapunov"->"lyapunov",
+(*"lyapunov3d"\[Rule]"lyapunov3d",*)
+"liapunov3d"->"lyapunov3d"(*,
+"stability"\[Rule]"stability"*)
+|>;
+diffEqDemo::usage::"diffEqDemo[demo] invokes the demonstration named demo.";
+diffEqDemo[]:=Keys[$diffEqDemos];
+diffEqDemo[s_String]:=With[{res=Lookup[
+$diffEqDemos,
+getSynonym[$demoThesaurus,s], (* TBD: check ??? *)
+Message[diffEqDemo::notent,s,diffEqDemo];$Failed]},
+Replace[res[],Except[_List]->Null]/;FreeQ[res,$Failed]];
+
+
+(* ::Input::Initialization:: *)
+(*Begin["Global`"];*)
+equilibriumDemo[]:=CreateDocument[{
+TextCell["Equilibrium stability demo","Section"],
+TextCell["Enter a vector field F in terms of x and y.  The demo assumes the origin to be an equilibrium.  The stability target defines the given neighborhood in which the trajectories from the neighborhood defined by radius should remain.  If for every stability target, it is possible to find a radius such that the trajectories remain within the stability target, the origin is a stable equilibrium. Separatrices will be shown when appropriate.","Text"],
+ExpressionCell[
+Manipulate[
+With[{
+vf=vplotter[RotationMatrix[t0].F,{x,-2,2},{y,-2,2},VectorStyle->LightGray,StreamStyle->LightGray]},
+Dynamic@Quiet[
+Show[
+vf,
+plotSeparatrices[RotationMatrix[theta].F,{x,-2,2},{y,-2,2},{0.,0.},"StoppingCriterion"->"Norm"->rad],
+stabilityTrajectories[RotationMatrix[theta].F,{x,-2,2},{y,-2,2},{0.,0.},rad,rstab,pts],
+PlotLabel->Row[{
+"Eigenvalues = ",
+SetPrecision[Chop@Eigenvalues[
+D[RotationMatrix[theta].F,{{x,y}}]/.Thread[{x,y}->{0,0}]
+],3]
+}]
+],
+{General::munfl,NDSolveValue::mxst}]
+],
+Row[{
+Control@{{F,{-y,2x},"F"},InputField,TrackingFunction->((F=#;theta=0.)&)},
+Control@{{vplotter,VectorPlot,""},{VectorPlot,StreamPlot}},
+" ",
+Control@{{update,False,"update"},{False,True},
+TrackingFunction->((update=#;If[TrueQ@update,t0=theta,t0=0.])&)}
+}],
+{{theta,0.,"perturb"},-0.4,0.4,
+TrackingFunction->((theta=#;If[TrueQ@update,t0=theta])&),
+Appearance->"Labeled"},
+{state,None},{{t0,0.},None},{{eq,{0.,0.}},None},
+{{rad,0.75,"radius"},0.05,1.5},
+{{rstab,1.5,"stability target"},0.1,1.9},
+{{pts,12,"points"},6,25,1},
+Bookmarks->{
+"node 1 (asymptotically stable)":>(F={-2x,-3y};theta=0.;pts=20),
+"node 2 (unstable)":>(F={2x,3y};theta=0.;pts=24),
+"saddle 1 (unstable)":>(F={-2x+y,3y-x};theta=0.;pts=20),
+"saddle 2 (unstable)":>(F={-2 x+y,-x-x^2+3 y-(5 y^2)/4};theta=0.;pts=25),
+"center 1 (stable)":>(F={-y,2x};theta=0.;pts=12),
+"spiral 1 (asymptotically stable)":>(F={-x+5 y,-2 x};theta=0.;pts=12),
+"spiral 2 (unstable)":>(F=-{-x-y,x-y};theta=0.;pts=12),
+"spiral 3 (asymptotically stable)":>(F={-x+y,-x-y+2 y^2};theta=0.;rad=0.75;pts=16),
+"border case 1":>(F={-x,-3x-y};theta=0.;pts=12),
+"border case 2":>(F={2 x-y,x};theta=0.;pts=25),
+"border case 3":>(F={-x,-3x-x^2-y+(2 y^2)/3};theta=0.;pts=12)}
+],
+"Output",
+CellContext->"diffEqClass`diffEqDump`"
+]
+},
+WindowTitle->"Equilibrium stability demo",
+StyleDefinitions->FrontEnd`FileName[{"diffEqClass"},"Diff Eq Style.nb",CharacterEncoding->"UTF-8"]];
+(*End[];*) (* "Global`" *)
+
+
+(* ::Input::Initialization:: *)
+lyapunovFunctionExplorer[]:=CreateDocument[{
+TextCell["Lyapunov function explorer","Section"],
+TextCell["Try to find the coefficients {a,b} and the angle t that make E\[ThinSpace]=\[ThinSpace]a(c\[ThinSpace]x+s\[ThinSpace]y)^2+b(c\[ThinSpace]y-s\[ThinSpace]x)^2 a Lyapunov function.  The function E and dE/dt may be viewed underlying the phase flow by clicking on the contourplot selector.  The color green indicates dE/dt\[ThinSpace]<\[ThinSpace]0 and red indicates dE/dt\[ThinSpace]>\[ThinSpace]0.  In the contour plot for E, one can tell the rate of change of E along the flow by how the flow crosses the contour lines. If there exists a setting that creates a function E such that the critical point in the center is surrounded by green, then the critical point is stable.","Text"],
+ExpressionCell[
+Manipulate[
+Pane[
+With[{sp=StreamPlot[F,{x,-2,2},{y,-2,2},
+StreamScale->Tiny,
+StreamColorFunction->Function[{x,y,vx,vy,speed},ColorData["RedGreenSplit"]@UnitStep[-Derivative[1,0][quadE[evs,t]][x,y]vx-Derivative[0,1][quadE[evs,t]][x,y]vy+10^-3]],
+StreamColorFunctionScaling->False
+]},
+Legended[
+Show[
+ControlActive[Graphics[{},Options[sp]],
+Switch[contourplot,
+None
+,Graphics[{},Options[sp]],
+"E"
+,ContourPlot[quadE[evs,t][x,y],
+{x,-2,2},{y,-2,2},
+Contours->15,ContourStyle->Gray,
+ColorFunction->(Directive[Opacity[0.3],ColorData["M10DefaultDensityGradient"][#]]&)],
+"dE/dt"
+,ContourPlot[{Derivative[1,0][quadE[evs,t]][x,y],Derivative[0,1][quadE[evs,t]][x,y]}.F,
+{x,-2,2},{y,-2,2},
+ContourStyle->Gray,
+ColorFunction->(Directive[Opacity[0.3],ColorData["RedGreenSplit"][Clip[0.5-#,{0,1}]]]&),
+ColorFunctionScaling->False
+]
+]
+],
+sp,
+Graphics[Point[{0,0}]]],
+SwatchLegend[ColorData["RedGreenSplit"]/@{0,1},{"dE/dt > 0 (unstable)","dE/dt < 0 (stable)"}]
+]
+],
+{500,350}],
+{{F,-{-y,x+y}},InputForm},
+{{evs,{1,2}},InputForm},
+{t,0,2.Pi},
+{{contourplot,None},{None,"E","dE/dt"}},
+Initialization:>(
+quadE[evs_,theta_]:=Function[{x,y},{x,y}.
+RotationMatrix[-theta].DiagonalMatrix[evs].RotationMatrix[theta].{x,y}];
+),
+Bookmarks->{
+"rotate 1":>(F={y,-x-y-2 y^2};evs={1,2};t=6.2;contourplot="dE/dt"),
+"valentine 1":>(F={-2x y,x^2-y^3};evs={1,1};t=0.;contourplot="dE/dt")
+}
+],
+"Output",
+CellContext->"diffEqClass`diffEqDump`"]
+},
+WindowTitle->"Lyapunov Explorer",
+StyleDefinitions->FrontEnd`FileName[{"diffEqClass"},"Diff Eq Style.nb",CharacterEncoding->"UTF-8"]];
+
+
+(* ::Input::Initialization:: *)
+lyapunovFunctionExplorer3D[]:=CreateDocument[{
+TextCell["Lyapunov function explorer 3D","Section"],
+TextCell["Try to find the coefficients {a,b} and the angle t that make E\[ThinSpace]=\[ThinSpace]a(c\[ThinSpace]x+s\[ThinSpace]y)^2+b(c\[ThinSpace]y-s\[ThinSpace]x)^2 a Lyapunov function.  The 3D surface represents the function E and phase flow is projected from the phase plane onto the surface.  The color green indicates dE/dt\[ThinSpace]<\[ThinSpace]0 and red indicates dE/dt\[ThinSpace]>\[ThinSpace]0. If there exists a setting that creates a function E such that the critical point in the center is surrounded by green, then the critical point is stable.","Text"],
+ExpressionCell[
+Manipulate[
+Pane[
+With[{flow=Cases[StreamPlot[{y,-x-y},{x,-2,2},{y,-2,2},
+StreamScale->Tiny],Arrow[p_]:>p,Infinity]},
+With[{flowCA=flow[[;;;;2]]},
+Legended[
+Dynamic[
+ControlActive[
+Graphics3D[{Arrowheads[Small],Thickness[Medium],
+{Function[{x0,y0},ColorData["RedGreenSplit"]@UnitStep[-{Derivative[1,0][quadE[evs,t]][x,y],Derivative[0,1][quadE[evs,t]][x,y]}.F+10^-3/.{x->x0,y->y0}]]@@First[#],
+Line[{##,quadE[evs,t][##]}&@@@#]
+}&/@flowCA,
+Thin,Line[
+Table[
+Append[#,quadE[evs,t]@@# ]&[{1.,u}.pv],
+{pv,Transpose[{#,Differences[Append[#,First@#]]}]&@{{-2.,-2.},{2.,-2.},{2.,2.},{-2.,2.}}},{u,Subdivide[0.,1.,20]}
+]],
+Point[{0,0,0}]
+},Options[Plot3D,BoxRatios]],
+Show[
+Plot3D[quadE[evs,t][x,y],
+{x,-2,2},{y,-2,2},
+MeshFunctions->{Function[{x0,y0},-{Derivative[1,0][quadE[evs,t]][x,y],Derivative[0,1][quadE[evs,t]][x,y]}.F+10^-3/.{x->x0,y->y0}],#3&},MeshShading->{Thread[Directive[Opacity[0.3],ColorData["RedGreenSplit"]/@{0,1}]]},Mesh->{{0},15}],
+Graphics3D[{Arrowheads[Small],
+{Function[{x0,y0},ColorData["RedGreenSplit"]@UnitStep[-{Derivative[1,0][quadE[evs,t]][x,y],Derivative[0,1][quadE[evs,t]][x,y]}.F+10^-3/.{x->x0,y->y0}]]@@First[#],
+Arrow[{##,quadE[evs,t][##]}&@@@#],
+Opacity[0.3],
+Arrow@PadRight[#,{Automatic,3},0.]
+}&/@flow
+}],
+Graphics3D[Point[{0,0,0}]]]
+](*,
+TrackedSymbols\[RuleDelayed]{evs,t}*)],
+SwatchLegend[ColorData["RedGreenSplit"]/@{0,1},{"dE/dt > 0 (unstable)","dE/dt < 0 (stable)"}]
+]
+]],
+{500,350}],
+{{F,-{-y,x+y}},InputForm},
+{{evs,{1,2},Dynamic@ssqlabel},InputForm,TrackingFunction->(If[ListQ@#&&Length@#==2&&AllTrue[#,Positive],
+evs=#;ssqlabel="ssq coefficients",ssqlabel="two positive numbers"]&)},
+{{t,0.,"rotate"},0,2.Pi},
+{{contourplot,None},None},
+{{ssqlabel,"ssq coefficients"},None},
+Initialization:>(
+quadE[evs_,theta_]:=Function[{x,y},{x,y}.
+RotationMatrix[theta].DiagonalMatrix[evs].RotationMatrix[-theta].{x,y}];
+),
+Bookmarks->{
+"rotate 1":>(F={y,-x-y-2 y^2};evs={1,2};t=6.2;contourplot="dE/dt"),
+"valentine 1":>(F={-2x y,x^2-y^3};evs={1,1};t=0.;contourplot="dE/dt")
+}
+],
+"Output"(*,
+CellContext\[Rule]"diffEqClass`diffEqDump`"*)]
+},
+WindowTitle->"Lyapunov Explorer 3D",
+Saveable->False,
+StyleDefinitions->FrontEnd`FileName[{"diffEqClass"},"Diff Eq Style.nb",CharacterEncoding->"UTF-8"]];
+
+
+(* ::Input::Initialization:: *)
+End[];(*"`diffEqDump`"*)
+
+
+(* ::Input::Initialization:: *)
+Begin["`diffEqDump`"];
+
+
+(* ::Input::Initialization:: *)
+(* find integer matrices with integer eigenvalues *)
+ClearAll[findIMIE,jordanBlock,invalidmatrixQ];
+Options[findIMIE]={
+"RandomSeed"->0,
+MaxIterations->Automatic,
+"Nonsingular"->Automatic,
+(*"JordanDecomposition"\[Rule]Automatic,(* list of block sizes *)*)
+"MaxEntry"->Automatic,(* max matrix entry of A *)
+"MaxEigenvalue"->Automatic,(* max eigenvalue of A *)
+"MaxIterations"->Automatic, (* max number of random tries *)
+"MaxRepeatedEigenvalue"->Automatic}; (* TBD: 
+										maximum algebraic multiplicity
+										of eigenvalues of A *)
+(* constructs Jordan block with diagonal \[Lambda] and superdiagonal m *)
+jordanBlock[1,\[Lambda]_,m_]:=\[Lambda]*IdentityMatrix[1];
+jordanBlock[dim_,\[Lambda]_,m_]:=\[Lambda]*IdentityMatrix[dim]+DiagonalMatrix[ConstantArray[m,dim-1],1];
+(* determines whether a matrix meets user constraints *)
+invalidmatrixQ[rank_,maxeigenval_][m_?MatrixQ,det_Integer]:=(*!TrueQ[MatrixRank[m]\[Equal]rank]*)det==0&&maxeigenval>det/2;
+invalidmatrixQ[rank_,maxeigenval_][m_,det_]:=True;
+(*diffEq::noev="\"MaxEigenvalue\" too small";*)
+(* findIMIE find integer matrices with integers eigenvalues (IMIE)
+*  findIMIE[d] returns a diagonalizable IMIE
+*  findIMIT[{d1, d2,...}] returns an IMIE with Jordan blocks of sizes d1, d2, etc
+*  findIMIE[{{d1,n1},...}] return an IMIE with a repeated Jordan block
+*  findIMIE[d, n] returns n IMIEs
+ *)
+findIMIE[d_Integer|d:{__Integer},n_Integer:1,OptionsPattern[]]:=
+With[{dims=Replace[d,k_Integer:>ConstantArray[1,k]]},
+BlockRandom@
+Module[{det,diag,pp,aa,dim,blockmat,maxentry,maxev,iter,maxiter,res},
+SeedRandom[OptionValue["RandomSeed"]];
+dim=Total@dims; (* dimension of matrices *)
+maxentry=OptionValue["MaxEntry"]/.Automatic->Max[2,Floor[8/dim]];
+maxev=OptionValue["MaxEigenvalue"]/.Automatic->10;
+res={}; (* accumulates results *)
+iter=0;
+maxiter=OptionValue[MaxIterations]/.Automatic->Max[100,2n];
+While[
+Length@res<n&&iter<maxiter,
+iter++;
+(* get a valid transition matrix *)
+While[invalidmatrixQ[dim,maxev][pp,det],pp=RandomInteger[{-1,1}maxentry,{dim,dim}];
+det=Abs@Det[pp];
+db["temp DET = ", det];
+];
+db["DET = ", det];
+If[det!=0,(* unnecessary consistency check *)
+diag=RandomChoice[ (* get eigenvalues *)
+If[TrueQ@Not@OptionValue["Nonsingular"],DeleteCases[#,0],#]&@Range[ (* XXX Need to fix empty list *)
+Mod[RandomInteger[{Ceiling[-det/2],Ceiling[det/2]}],det,-maxev],maxev,
+det],
+Length@dims](*RandomInteger[{Ceiling[-det/2],Ceiling[det/2]}]+det*RandomInteger[{-1,1}Max[1,Floor[10/det]],Length@dims]*);
+(* construct Jordan block form *)
+blockmat=LinearAlgebra`BlockDiagonalMatrix[
+Table[
+jordanBlock[
+dims[[k]],
+diag[[k]],
+det*RandomChoice[DeleteCases[Apply[Range][{-1,1}Max[1,Floor[10/det]]],0]]
+],
+{k,Length@dims}]
+](*RandomInteger[{Ceiling[-det/2],Ceiling[det/2]}]+det*RandomInteger[{-1,1}Max[1,Floor[10/det]],dim]*);
+db["DEBUG ",{d,dims,MatrixForm@blockmat}];
+(* result = conjugated block form *)
+aa=pp.blockmat.Inverse[pp],
+db["DEBUG ",{MatrixRank[pp],det}];
+aa=$Failed
+];
+If[FreeQ[aa,$Failed],
+(* add result if not present *)
+res=DeleteDuplicates[Append[res,aa]]
+]
+];
+If[Length@res<n,Print["MaxIterations"]]; (* XXX TBD *)
+If[n==1,First@res,res]
+]];
+
+
+(* ::Input::Initialization:: *)
+End[];(*"`diffEqDump`"*)
 
 
 (* ::Input::Initialization:: *)

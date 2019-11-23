@@ -1,0 +1,1133 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     42460,       1132]
+NotebookOptionsPosition[     37339,       1037]
+NotebookOutlinePosition[     38676,       1077]
+CellTagsIndexPosition[     38494,       1069]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Linear equations with discontinuous coefficients", "Section",
+ CellChangeTimes->{{3.597669105024255*^9, 3.5976691203619013`*^9}, {
+   3.598093952817689*^9, 3.598093958371542*^9}, {3.598571142464054*^9, 
+   3.59857114402524*^9}, {3.599744587547727*^9, 3.5997445893226843`*^9}, {
+   3.60088417938671*^9, 3.600884184022916*^9}, {3.600884228287355*^9, 
+   3.6008842316311083`*^9}, {3.687431176750906*^9, 3.6874311818581333`*^9}, {
+   3.687431377113083*^9, 3.687431378215631*^9}, 3.687802810285522*^9, {
+   3.7830016510504913`*^9, 
+   3.783001667129801*^9}},ExpressionUUID->"1b66d64b-32c6-4e0c-9c3a-\
+23d6acdaf5f9"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", "rewrite", " ", "*)"}]], "Input",
+ CellChangeTimes->{
+  3.778088499369768*^9, {3.783020127903656*^9, 
+   3.783020132013672*^9}},ExpressionUUID->"81f2d88b-8a07-4009-aeb8-\
+30f3299c73fd"],
+
+Cell["\<\
+In this section, we review the basic properties of linear differential \
+equations.  Having studied various methods for finding their solutions, we \
+have seen that only a few types may be solved explicitly.  We have seen \
+solutions that grow exponentially, decay exponentially and oscillate.  One \
+can often deduce such qualitative properties from the differential equation \
+itself, even when the equation cannot be solved explicitly.  This is because \
+the solution space of a linear differential equation has a certain structure. \
+ It is that which we wish to explore now.  Principally first-order and \
+second-order equations will be studied in these notes, whose properties are \
+accessible to readers who have not taken linear algebra.  Similar \
+considerations can be extended to higher dimension systems.  In some cases, \
+one needs to have a deeper understanding of linear algebra to fully explore \
+and appreciate the structure.\
+\>", "Text",
+ CellChangeTimes->{
+  3.597881079469164*^9, {3.598094124863093*^9, 3.598094177162812*^9}, {
+   3.59809421915949*^9, 3.598094341087802*^9}, {3.598571156085518*^9, 
+   3.598571177787372*^9}, {3.598571221269574*^9, 3.598571268318091*^9}, {
+   3.600884281539303*^9, 3.600884310474234*^9}, {3.600884349455606*^9, 
+   3.600884392459186*^9}, {3.600885097844617*^9, 3.6008851097321377`*^9}, {
+   3.600898790074149*^9, 3.600898795013054*^9}, {3.6013868564476643`*^9, 
+   3.601386856580435*^9}, {3.6874312731945143`*^9, 3.687431327832632*^9}, {
+   3.6874313874608803`*^9, 3.687431475554247*^9}, {3.6875153448083553`*^9, 
+   3.687515355493761*^9}, {3.6875154557432213`*^9, 3.6875157753241568`*^9}, {
+   3.687515845176468*^9, 
+   3.6875159122479153`*^9}},ExpressionUUID->"fd925107-9412-40fe-8360-\
+8f32ef3c0b9f"],
+
+Cell[CellGroupData[{
+
+Cell["Homogeneous equations", "Subsection",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.600885324720023*^9, 
+   3.600885330575157*^9}},ExpressionUUID->"68282ca5-7ccf-4d70-b49c-\
+9ed396782af4"],
+
+Cell["Spring-mass system with friction", "Subsubsection",
+ CellChangeTimes->{
+  3.778088499369768*^9, {3.7830201057646112`*^9, 3.783020116080967*^9}, {
+   3.783032709925902*^9, 
+   3.783032714491654*^9}},ExpressionUUID->"0bf5de2d-0c23-4630-a42e-\
+d5eb06f92a83"],
+
+Cell[CellGroupData[{
+
+Cell["Phase flow", "Subsubsection",
+ CellChangeTimes->{{3.687467936805459*^9, 
+  3.68746793935809*^9}},ExpressionUUID->"6b9a2fff-542f-4a59-84f0-\
+3c06aae5dd33"],
+
+Cell[TextData[{
+ "In this section, we would like to think of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "79795fcb-c7fe-4c36-8e90-252ddbf1d172"],
+ " as \[OpenCurlyDoubleQuote]time\[CloseCurlyDoubleQuote] and ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],ExpressionUUID->
+  "81448088-3aa2-4217-bd27-5d27efb3eb7c"],
+ " as \[OpenCurlyDoubleQuote]position\[CloseCurlyDoubleQuote] and discuss the \
+evolution of the system in equation (",
+ 
+ CounterBox["EquationNumbered", "ref:lin:hom"],
+ ") as \[OpenCurlyDoubleQuote]time\[CloseCurlyDoubleQuote] increases.  While \
+the example at hand is a first-order system whose phase space is a line, our \
+remarks apply to a phase space of any dimension.  Every position ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "0"], TraditionalForm]],ExpressionUUID->
+  "5030c15c-f99a-40d6-b948-83041492d710"],
+ " in phase space corresponds to an initial condition ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", 
+    RowBox[{
+     SubscriptBox["y", "0"], "."}]}], TraditionalForm]],ExpressionUUID->
+  "b40e1037-3195-44f4-9474-ab71ad681979"],
+ "  The corresponding solution given by equation (",
+ 
+ CounterBox["EquationNumbered", "ref:lin:homsol"],
+ ") may be described in terms of a function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[CurlyPhi]", "x"], ","}], TraditionalForm]],
+  ExpressionUUID->"06cc917b-c4bd-4fe3-bca0-0c2a5c227221"],
+ " where ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "0a2ee28b-2a69-4327-b10d-4a5bf2850145"],
+ " is a parameter, by"
+}], "Text",
+ CellChangeTimes->{{3.687469178060484*^9, 3.687469262787059*^9}, {
+   3.687469299236773*^9, 3.687469383509725*^9}, {3.687469506073245*^9, 
+   3.687469508997122*^9}, {3.687469761883093*^9, 3.687469845989253*^9}, {
+   3.6874698761844597`*^9, 3.687469898673285*^9}, {3.687470113628284*^9, 
+   3.687470154964718*^9}, 3.687470196771021*^9, {3.687470632526325*^9, 
+   3.687470681925755*^9}},ExpressionUUID->"ecb7d748-28f8-4107-b6ca-\
+f65343f6ac11"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CurlyPhi]", "x"], "(", 
+      SubscriptBox["y", "0"], ")"}], 
+     OverscriptBox["=", "def"], 
+     RowBox[{
+      SuperscriptBox["e", 
+       RowBox[{"-", 
+        RowBox[{
+         SubsuperscriptBox["\[Integral]", 
+          SubscriptBox["x", 
+           StyleBox["0",
+            FontSize->7]], "x"], 
+         RowBox[{
+          RowBox[{"P", "(", "t", ")"}], "\[ThinSpace]", 
+          RowBox[{"\[DifferentialD]", "t"}]}]}]}]], 
+      SubscriptBox["y", "0"]}]}]}], TraditionalForm]],ExpressionUUID->
+  "506e7c7b-f1fc-43d7-94fb-4b735a882e93"],
+ "."
+}], "EquationNumbered",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.6009485439443502`*^9, 3.600948594939784*^9}, 
+   3.6009486349999447`*^9, {3.600948688718368*^9, 3.600948763204192*^9}, {
+   3.6009539594046183`*^9, 3.600953975444915*^9}, {3.687469422883356*^9, 
+   3.687469524556138*^9}, 3.687471839311763*^9},
+ CellTags->
+  "ref:lin:flow",ExpressionUUID->"ee306ec3-06bd-4243-b7fc-02a66f6bd3ab"],
+
+Cell[TextData[{
+ "Thus the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[CurlyPhi]", "x"], "(", 
+    SubscriptBox["y", "0"], ")"}], TraditionalForm]],ExpressionUUID->
+  "5314d1b5-ce8f-4bfa-8e0a-3064ba9f83df"],
+ " depends on two variables, the time ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "b5b86cc0-5b73-4ff7-830a-dc3ce41f5251"],
+ " and the position ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "0"], "."}], TraditionalForm]],ExpressionUUID->
+  "c6b0145a-a7c7-4eb5-a657-15dbeb7c9ca9"],
+ "  The function ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CurlyPhi]", "x"], TraditionalForm]],ExpressionUUID->
+  "f9fc7759-ff9a-46c3-bdd2-560112b3ae25"],
+ " maps each point in phase space to the position in phase space to which the \
+point will have moved at time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "."}], TraditionalForm]],ExpressionUUID->
+  "dd921f4a-86e6-4380-bb69-e8284dd8d3f8"],
+ " Such a function called the ",
+ StyleBox["phase flow",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " of the differential equation (",
+ 
+ CounterBox["EquationNumbered", "ref:lin:hom"],
+ ").  The phase flow can be considered a symmetry of the phase space, in that \
+an integral curve is mapped to itself, each point being moved to the position \
+at which it will lie at time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "."}], TraditionalForm]],ExpressionUUID->
+  "2487a3a8-5e45-48ff-8661-d6dd88caa564"],
+ "One can extend the symmetry to the phase field itself by defining the \
+action of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CurlyPhi]", "x"], TraditionalForm]],ExpressionUUID->
+  "1ee70460-433d-41de-b321-9e12984fed65"],
+ " on the phase vectors to transport each tangent vector at each ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "0"], TraditionalForm]],ExpressionUUID->
+  "99b9f1b6-aa8c-40db-94f5-1cd2010609bf"],
+ " to the tangent vector at  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", "x"], "(", 
+     SubscriptBox["y", "0"], ")"}], "."}], TraditionalForm]],ExpressionUUID->
+  "152c6c16-4f34-43a9-b2bb-fe6d92e737be"]
+}], "Text",
+ CellChangeTimes->{{3.6874696055306063`*^9, 3.687469655052888*^9}, {
+  3.687469860942947*^9, 3.687469867712563*^9}, {3.687469913781169*^9, 
+  3.68746991578437*^9}, {3.687469973261294*^9, 3.687470095099382*^9}, {
+  3.687470207907401*^9, 3.687470375925692*^9}, {3.687470439858242*^9, 
+  3.687470620095396*^9}, {3.687470719096549*^9, 3.687470780940216*^9}},
+ CellTags->
+  "phase flow",ExpressionUUID->"fa49f700-fac3-4579-8a25-0c1b6ba1e29f"],
+
+Cell[TextData[{
+ StyleBox["Theorem.",
+  FontWeight->"Bold"],
+ "  The phase flow ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[CurlyPhi]", "x"], "(", 
+    SubscriptBox["y", "0"], ")"}], TraditionalForm]],ExpressionUUID->
+  "4765deb1-326a-4538-a2d8-53755e9d55a2"],
+ " of a homogeneous linear differential equation is linear in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "0"], "."}], TraditionalForm]],ExpressionUUID->
+  "0df2e8db-4c72-4915-95cb-4e1bef5d5eb5"]
+}], "Theorem",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601251265703323*^9, 3.6012512994073973`*^9}, {
+   3.601251653975046*^9, 3.601251660466638*^9}, {3.601251758664611*^9, 
+   3.6012517694232483`*^9}, {3.601251953238065*^9, 3.60125197095784*^9}, {
+   3.601252012221924*^9, 3.601252023642198*^9}, {3.601252447329503*^9, 
+   3.601252478606024*^9}, {3.601252561183601*^9, 3.601252580631761*^9}, {
+   3.6012526900266848`*^9, 3.6012527830775337`*^9}, {3.601253545912126*^9, 
+   3.601253574644343*^9}, {3.601253807802641*^9, 3.6012538121787767`*^9}, {
+   3.687471466990286*^9, 3.687471481580023*^9}, {3.687471526078561*^9, 
+   3.687471541129487*^9}, {3.687473912137295*^9, 
+   3.687473920563786*^9}},ExpressionUUID->"796a7376-e70f-48ab-a306-\
+a53a5376272c"],
+
+Cell[TextData[{
+ StyleBox["Proof, in the case of  equation (",
+  FontSlant->"Italic"],
+ 
+ CounterBox["EquationNumbered", "ref:lin:hom"],
+ StyleBox["):",
+  FontSlant->"Italic"],
+ "  For a fixed ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", ","}], TraditionalForm]],ExpressionUUID->
+  "db0dbe8b-7467-4d18-87a8-0de7901b9cf8"],
+ "equation (",
+ 
+ CounterBox["EquationNumbered", "ref:lin:flow"],
+ ") defines ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", "x"], "(", 
+     SubscriptBox["y", "0"], ")"}], "=", 
+    RowBox[{"A", "\[ThinSpace]", 
+     SubscriptBox["y", "0"]}]}], TraditionalForm]],ExpressionUUID->
+  "abc605af-fd1e-4b59-af51-972bea6eb81f"],
+ ", where ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "f8d15d34-b342-48c9-b18f-1d08bde95b33"],
+ " is constant. \[FilledSquare]"
+}], "ProofText",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601254092645046*^9, 3.601254097413124*^9}, {
+   3.601254737894252*^9, 3.601254741840456*^9}, {3.601254852597657*^9, 
+   3.6012548729490767`*^9}, {3.601255280046321*^9, 3.6012552858058*^9}, {
+   3.687471588727189*^9, 3.687471732288467*^9}, 3.687471767494423*^9, {
+   3.6874718691793537`*^9, 3.687471890300045*^9}, {3.6874719312251997`*^9, 
+   3.687472025206728*^9}},ExpressionUUID->"e120a9f9-a06f-4c1d-a9ba-\
+dcf68ece7420"],
+
+Cell[TextData[{
+ StyleBox["Theorem.",
+  FontWeight->"Bold"],
+ "  The phase flow ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[CurlyPhi]", "x"], "(", 
+    SubscriptBox["y", "0"], ")"}], TraditionalForm]],ExpressionUUID->
+  "02620904-f3d2-488e-a037-de6faf75505b"],
+ " satisfies the so-called homomorphism property, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", "b"], "(", 
+     RowBox[{
+      SuperscriptBox["\[CurlyPhi]", "a"], "(", 
+      SubscriptBox["y", "0"], ")"}], ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", 
+      RowBox[{"a", "+", "b"}]], "(", 
+     SubscriptBox["y", "0"], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "94a3d175-9bcd-4640-aacf-bb5dfe94c222"]
+}], "Theorem",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601251265703323*^9, 3.6012512994073973`*^9}, {
+   3.601251653975046*^9, 3.601251660466638*^9}, {3.601251758664611*^9, 
+   3.6012517694232483`*^9}, {3.601251953238065*^9, 3.60125197095784*^9}, {
+   3.601252012221924*^9, 3.601252023642198*^9}, {3.601252447329503*^9, 
+   3.601252478606024*^9}, {3.601252561183601*^9, 3.601252580631761*^9}, {
+   3.6012526900266848`*^9, 3.6012527830775337`*^9}, {3.601253545912126*^9, 
+   3.601253574644343*^9}, {3.601253807802641*^9, 3.6012538121787767`*^9}, {
+   3.687471466990286*^9, 3.687471481580023*^9}, {3.687471526078561*^9, 
+   3.687471541129487*^9}, {3.687472281169674*^9, 3.6874723289306297`*^9}, {
+   3.68747250851009*^9, 
+   3.687472510779022*^9}},ExpressionUUID->"2c677b78-ae03-4351-950f-\
+f37ff25c17ee"],
+
+Cell[TextData[{
+ StyleBox["Proof:",
+  FontSlant->"Italic"],
+ "  This should seem obvious when you think about it the right way. The \
+position ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "1"], "=", 
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", "a"], "(", 
+     SubscriptBox["y", "0"], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "147a6f7a-9b5b-4155-b312-1412d004486e"],
+ "is the position to which a particle starting at ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "0"], TraditionalForm]],ExpressionUUID->
+  "56fe36d4-da0e-469a-9587-d95cf64453ad"],
+ " and moving under the flow of the differential equation will have moved at \
+time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "."}], TraditionalForm]],ExpressionUUID->
+  "f4ea718a-d8a4-47c0-ae9b-cd269aae376c"],
+ " After another time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", ","}], TraditionalForm]],ExpressionUUID->
+  "5bd4e4a0-c13d-4f38-a434-0997568266a5"],
+ " the particle which was at ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]],ExpressionUUID->
+  "2dd70823-80e8-4b9b-beda-33053e8470af"],
+ " will have moved to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", "b"], "(", 
+     SubscriptBox["y", "1"], ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CurlyPhi]", "b"], "(", 
+      RowBox[{
+       SuperscriptBox["\[CurlyPhi]", "a"], "(", 
+       SubscriptBox["y", "0"], ")"}], ")"}], "."}]}], TraditionalForm]],
+  ExpressionUUID->"0a17a0a9-a4ad-45b2-b277-c6c0bb02cf43"],
+ " Since the whole time expired is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "+", "b"}], ","}], TraditionalForm]],ExpressionUUID->
+  "ae971ec8-bdfe-4fed-aaaf-bb4a731fa932"],
+ " this position is also ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[CurlyPhi]", 
+      RowBox[{"a", "+", "b"}]], "(", 
+     SubscriptBox["y", "0"], ")"}], "."}], TraditionalForm]],ExpressionUUID->
+  "3d41830e-add1-4a81-9b6c-3a343707ac0b"],
+ " \[FilledSquare]"
+}], "ProofText",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601254092645046*^9, 3.601254097413124*^9}, {
+   3.601254737894252*^9, 3.601254741840456*^9}, {3.601254852597657*^9, 
+   3.6012548729490767`*^9}, {3.601255280046321*^9, 3.6012552858058*^9}, {
+   3.687471588727189*^9, 3.687471732288467*^9}, 3.687471767494423*^9, {
+   3.6874718691793537`*^9, 3.687471890300045*^9}, {3.6874719312251997`*^9, 
+   3.687472025206728*^9}, {3.687472372362548*^9, 3.687472705475925*^9}, {
+   3.68747273579688*^9, 
+   3.687472774777602*^9}},ExpressionUUID->"4bf86860-2087-4f06-987c-\
+bd533caeecf4"],
+
+Cell[TextData[{
+ StyleBox["Remark:",
+  FontWeight->"Bold"],
+ "  That this is true for the flow given in equation (",
+ 
+ CounterBox["EquationNumbered", "ref:lin:flow"],
+ ") can been shown directly from the formula."
+}], "Remark",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601289513235388*^9, 3.6012895230442667`*^9}, {
+   3.601289683697589*^9, 3.601289738045025*^9}, {3.601289768791945*^9, 
+   3.6012897760704823`*^9}, {3.601289935122168*^9, 3.6012899380961123`*^9}, {
+   3.601290014370166*^9, 3.601290069428673*^9}, {3.601290114282916*^9, 
+   3.6012902083110027`*^9}, {3.6012908354373713`*^9, 3.601290856564643*^9}, {
+   3.6012911267259083`*^9, 3.601291175190181*^9}, {3.601291208760869*^9, 
+   3.601291209064103*^9}, {3.60129132975895*^9, 3.6012913524921618`*^9}, {
+   3.6012913920699377`*^9, 3.601291440456648*^9}, {3.601291491408917*^9, 
+   3.601291517205433*^9}, {3.601291605113099*^9, 3.6012917577552443`*^9}, {
+   3.601291801901711*^9, 3.60129180190176*^9}, {3.6012924656022797`*^9, 
+   3.601292493896948*^9}, {3.601292617917679*^9, 3.6012926180529346`*^9}, {
+   3.60129270369806*^9, 3.601292765754122*^9}, {3.601292873609672*^9, 
+   3.601292877930533*^9}, {3.6012929146043243`*^9, 3.601292916595681*^9}, {
+   3.601292967772244*^9, 3.601293042091889*^9}, {3.601293146953129*^9, 
+   3.601293155423869*^9}, {3.6012932075233173`*^9, 3.60129326095245*^9}, {
+   3.6012932949392*^9, 3.6012933156046667`*^9}, {3.601293350310108*^9, 
+   3.601293467549287*^9}, {3.6012940352400312`*^9, 3.6012940483017473`*^9}, {
+   3.687472837824643*^9, 
+   3.6874728987192698`*^9}},ExpressionUUID->"44dcf8f7-66e1-4331-ab90-\
+8a7970c2eb44"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Inhomogeneous equations", "Subsection",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601301199772674*^9, 
+   3.6013012039224777`*^9}},ExpressionUUID->"f1b169e4-2af7-483a-a931-\
+9d6383569e19"],
+
+Cell[CellGroupData[{
+
+Cell["Superposition: the accumulation of perturbations", "Subsubsection",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601302966922666*^9, 3.601302968992683*^9}, {
+   3.601303476800851*^9, 3.6013034831101294`*^9}, {3.601348851719626*^9, 
+   3.6013488535884953`*^9}},ExpressionUUID->"82f68bb1-9000-4f15-9076-\
+ca67eb61e4f8"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"rewrite", ":", " ", 
+   RowBox[{
+    RowBox[{"As", " ", "we", " ", "discussed", " ", "earlier"}], "..."}]}], 
+  " ", "*)"}]], "Input",
+ CellChangeTimes->{
+  3.778088499369768*^9, {3.783020064136046*^9, 
+   3.7830200830854816`*^9}},ExpressionUUID->"772ea200-242d-4ca5-8240-\
+5ff8f446fb44"],
+
+Cell[TextData[{
+ StyleBox["Theorem.",
+  FontWeight->"Bold"],
+ StyleBox[" (The Principle of Superposition.)",
+  FontSlant->"Plain"],
+ "  If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "1"], ",", 
+    SubscriptBox["y", "2"]}], TraditionalForm]],ExpressionUUID->
+  "2b08c8b8-a065-4c11-bec1-346755e7b14d"],
+ " are solutions to the inhomogeneous linear equations ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"L", "\[VeryThinSpace]", 
+      SubscriptBox["y", "1"]}], "=", 
+     SubscriptBox["Q", "1"]}], ",", " ", 
+    RowBox[{
+     RowBox[{"L", "\[VeryThinSpace]", 
+      SubscriptBox["y", "2"]}], "=", 
+     SubscriptBox["Q", "2"]}]}], TraditionalForm]],ExpressionUUID->
+  "d0bc3058-e594-4edb-9af9-8cda15395a22"],
+ " respectively, then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     SubscriptBox["y", "1"], "+", 
+     SubscriptBox["y", "2"]}]}], TraditionalForm]],ExpressionUUID->
+  "9de0bdd4-c419-4482-b086-c469e9c917a0"],
+ " is a solution to the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"L", "\[VeryThinSpace]", "y"}], "=", 
+    RowBox[{
+     SubscriptBox["Q", "1"], "+", 
+     RowBox[{
+      SubscriptBox["Q", "2"], "."}]}]}], TraditionalForm]],ExpressionUUID->
+  "00c6de3b-d783-4589-86ec-24d53dc36e25"]
+}], "Theorem",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601349784608306*^9, 
+   3.601349963271689*^9}},ExpressionUUID->"241e50ec-12e1-442d-8b86-\
+f478a8aa4b7d"],
+
+Cell[TextData[{
+ StyleBox["Remark.",
+  FontWeight->"Bold"],
+ "  This applies to any linear operator ",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]],ExpressionUUID->
+  "7e88d49e-3fb9-4985-90e8-ab0ff303eb76"],
+ ".  Of course, here we have in mind the linear differential equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"d", "\[VeryThinSpace]", "y"}], 
+      RowBox[{"d", "\[VeryThinSpace]", "x"}]], "+", 
+     RowBox[{
+      RowBox[{"P", "(", "x", ")"}], " ", "y"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["Q", "1"], "(", "x", ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["Q", "2"], "(", "x", ")"}], "."}]}]}], TraditionalForm]],
+  ExpressionUUID->"c3015edb-20f4-4e22-930c-075c2ec475d1"]
+}], "Remark",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601349993860754*^9, 
+   3.601350085764182*^9}},ExpressionUUID->"8a5d72d3-10fe-4c67-b0f1-\
+eae1c997c225"],
+
+Cell[TextData[{
+ "The Principle of Superposition allows us to break down a perturbation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Q", "=", 
+    RowBox[{
+     SubscriptBox["Q", "1"], "+", 
+     SubscriptBox["Q", "2"], "+", 
+     RowBox[{"\[CenterDot]", "\[CenterDot]", "\[CenterDot]"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"43f388fa-9ae6-41de-8578-d9e46c84797f"],
+ " into (a finite number of) components ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["Q", "1"], ",", 
+    SubscriptBox["Q", "2"], ",", "..."}], TraditionalForm]],ExpressionUUID->
+  "0908a1ab-e118-42da-bf2a-59afdaf36ab4"],
+ " and add the effects ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "1"], ",", 
+    SubscriptBox["y", "2"], ",", 
+    RowBox[{"...", "."}]}], TraditionalForm]],ExpressionUUID->
+  "33efff28-3f02-4161-bd00-527ea095d2b1"]
+}], "Text",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350128950409*^9, 
+   3.601350310910387*^9}},ExpressionUUID->"759ef0ba-02a0-43d3-a4dc-\
+c774134ece96"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Instantaneous bumps", "Subsubsection",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.6013029743364563`*^9, 3.601302975811488*^9}, {
+   3.601303488814158*^9, 3.601303494303932*^9}, {3.601304100514483*^9, 
+   3.601304103282096*^9}},ExpressionUUID->"f02b31de-3a6b-4d0e-885e-\
+3515afee9322"],
+
+Cell[TextData[{
+ "The ",
+ StyleBox["Dirac delta function",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox["\[Delta]", TraditionalForm]],ExpressionUUID->
+  "622e2650-4609-453b-a34e-1a68d8a313fd"],
+ " has the properties that"
+}], "Text",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.6013505092374268`*^9, 3.6013505327149363`*^9}},
+ CellTags->
+  "Dirac delta \
+function",ExpressionUUID->"c9c3df3d-7f19-462a-bdc6-f8981c2e9666"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Delta]", "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"6704a71a-d419-4fc1-b0c4-012bfdba03fa"],
+ " for all ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "\[NotEqual]", "0"}], ","}], TraditionalForm]],
+  ExpressionUUID->"36fd4ddc-a099-40a1-a789-f58e17e32d59"],
+ " and"
+}], "TextContinued",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.6013505490518627`*^9, 
+   3.601350570728684*^9}},ExpressionUUID->"d58f88c6-d51a-410e-ad8b-\
+b21b22c9cc25"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"-", "\[Infinity]"}], "\[Infinity]"], 
+     RowBox[{
+      RowBox[{"\[Delta]", "(", "x", ")"}], " ", "d", "\[VeryThinSpace]", 
+      "x"}]}], "=", "1."}], TraditionalForm]],ExpressionUUID->
+  "459d468d-18f5-4b9f-a067-c445dd766595"]
+}], "TextContinued",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350573845389*^9, 
+   3.601350618024886*^9}},ExpressionUUID->"600fee3a-9d13-40ef-b11d-\
+d76ad7c9ea8b"],
+
+Cell["\<\
+Technically speaking it is not a function.  It is usually representing as a \
+limiting process.  For instance\
+\>", "TextContinued",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350637993101*^9, 
+   3.601350700171681*^9}},ExpressionUUID->"d491ecd0-7cfb-4414-9395-\
+06c8e0ffb0f1"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Delta]", "n"], "(", "x", ")"}], "=", 
+    TagBox[GridBox[{
+       {"\[Piecewise]", GridBox[{
+          {"0", 
+           RowBox[{
+            RowBox[{"\[LeftBracketingBar]", "x", "\[RightBracketingBar]"}], 
+            ">", 
+            RowBox[{"1", "/", "n"}]}]},
+          {
+           RowBox[{"n", "/", "2"}], 
+           RowBox[{
+            RowBox[{"\[LeftBracketingBar]", "x", "\[RightBracketingBar]"}], 
+            "<", 
+            RowBox[{"1", "/", "n"}]}]}
+         },
+         AllowedDimensions->{2, Automatic},
+         Editable->True,
+         GridBoxAlignment->{
+          "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.84]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}},
+         Selectable->True]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.35]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     "Piecewise",
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False]}], TraditionalForm]],ExpressionUUID->
+  "7169bfcd-e498-44f0-904e-84e4c16baadf"]
+}], "Equation",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350716924038*^9, 3.6013507902205973`*^9}, {
+   3.6875288330638227`*^9, 
+   3.6875288335076303`*^9}},ExpressionUUID->"7a8f0b40-b68a-40b1-8312-\
+c9a757f15581"],
+
+Cell[TextData[{
+ "as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "\[Rule]", 
+    RowBox[{"\[Infinity]", "."}]}], TraditionalForm]],ExpressionUUID->
+  "d2eeb318-cd58-4e1a-ae8e-69fc3d32dca2"],
+ "Some of the important formulas for the delta function are"
+}], "TextContinued",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350637993101*^9, 3.601350700171681*^9}, {
+   3.6013508552104807`*^9, 
+   3.601350905417781*^9}},ExpressionUUID->"b837c236-f585-47d9-a3c6-\
+71aa17fcd496"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"-", "\[Infinity]"}], "\[Infinity]"], 
+     RowBox[{
+      RowBox[{"\[Delta]", "(", "x", ")"}], 
+      RowBox[{"g", "(", "x", ")"}], "  ", "d", "\[VeryThinSpace]", "x"}]}], 
+    "=", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["lim", 
+       RowBox[{"n", "\[Rule]", "\[Infinity]"}], ""], 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", 
+        RowBox[{"-", "\[Infinity]"}], "\[Infinity]"], 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[Delta]", "n"], "(", "x", ")"}], 
+        RowBox[{"g", "(", "x", ")"}], "  ", "d", "\[VeryThinSpace]", 
+        "x"}]}]}], "=", 
+     RowBox[{"g", "(", "0", ")"}]}]}], TraditionalForm]],ExpressionUUID->
+  "9c3a825c-6ed9-4a01-b6db-cf1675810629"]
+}], "Equation",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350716924038*^9, 3.6013507902205973`*^9}, {
+   3.601350917581071*^9, 3.6013509911041813`*^9}, {3.601351236721159*^9, 
+   3.601351246548519*^9}},
+ UnderoverscriptBoxOptions->{
+ LimitsPositioning->
+  False},ExpressionUUID->"656aa6ff-3b4c-4526-8d5d-61e1f3e48c36"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"-", "\[Infinity]"}], "\[Infinity]"], 
+     RowBox[{
+      RowBox[{"\[Delta]", "(", 
+       RowBox[{"x", "-", "a"}], ")"}], 
+      RowBox[{"g", "(", "x", ")"}], "  ", "d", "\[VeryThinSpace]", "x"}]}], 
+    "=", 
+    RowBox[{"g", "(", "a", ")"}]}], TraditionalForm]],ExpressionUUID->
+  "4a281e36-cb13-411a-a9b6-0b866f9b2c3e"]
+}], "Equation",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350716924038*^9, 3.6013507902205973`*^9}, {
+   3.601350917581071*^9, 3.6013509911041813`*^9}, {3.601351236721159*^9, 
+   3.6013512763950872`*^9}, {3.601351868316893*^9, 3.601351870622877*^9}},
+ UnderoverscriptBoxOptions->{
+ LimitsPositioning->
+  False},ExpressionUUID->"9e5fb7fb-3e96-48d1-8919-521c4b53087f"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"-", "\[Infinity]"}], 
+      RowBox[{"\[ThinSpace]", "x"}]], 
+     RowBox[{
+      RowBox[{"\[Delta]", "(", 
+       RowBox[{"t", "-", "a"}], ")"}], "\[ThinSpace]", "d", 
+      "\[VeryThinSpace]", "t"}]}], "=", 
+    TagBox[GridBox[{
+       {"\[Piecewise]", GridBox[{
+          {"0", 
+           RowBox[{
+            RowBox[{"x", "<", "a"}], ","}]},
+          {"1", 
+           RowBox[{"x", ">", 
+            RowBox[{"a", "."}]}]}
+         },
+         AllowedDimensions->{2, Automatic},
+         Editable->True,
+         GridBoxAlignment->{
+          "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.84]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}},
+         Selectable->True]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.35]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     "Piecewise",
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False]}], TraditionalForm]],ExpressionUUID->
+  "fd436b2c-47bf-495f-a29f-5aa2a3c0e252"]
+}], "Equation",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350716924038*^9, 3.6013507902205973`*^9}, {
+   3.601350917581071*^9, 3.6013509911041813`*^9}, {3.601351236721159*^9, 
+   3.6013512763950872`*^9}, {3.6013513557986193`*^9, 3.601351446732411*^9}, {
+   3.6013518619958153`*^9, 3.601351865920753*^9}, {3.601351954458146*^9, 
+   3.6013519725490007`*^9}, {3.601352075644415*^9, 3.601352092283996*^9}, {
+   3.6013524689129753`*^9, 3.6013524709713306`*^9}},
+ UnderoverscriptBoxOptions->{
+ LimitsPositioning->
+  False},ExpressionUUID->"1b49b17a-f757-4b33-a433-506ef0a277f2"],
+
+Cell[TextData[{
+ "The last function is called the ",
+ StyleBox["Heaviside theta function",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Theta]", "(", 
+     RowBox[{"x", "-", "a"}], ")"}], "."}], TraditionalForm]],ExpressionUUID->
+  "c875edc2-8297-49d0-830f-4a62afc568d4"],
+ " The last equation makes the delta function appear to be the \
+\[OpenCurlyDoubleQuote]derivative\[CloseCurlyDoubleQuote] of a unit jump, \
+such as turning a switch on.  It is sometimes thought of as a unit bump, as \
+if the velocity of a particle could go from 0 to 1 instantaneously."
+}], "TextContinued",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350637993101*^9, 3.601350700171681*^9}, {
+   3.6013508552104807`*^9, 3.601350905417781*^9}, {3.601351481967801*^9, 
+   3.601351522083728*^9}, {3.601351559130229*^9, 3.601351578446536*^9}, {
+   3.6013517286797028`*^9, 3.6013517396820927`*^9}, {3.6013521315458097`*^9, 
+   3.6013521634046383`*^9}},ExpressionUUID->"3c6fdf01-302f-4472-9a11-\
+302908cae508"],
+
+Cell["The solution of the equation", "Text",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.60135164476683*^9, 
+   3.601351655385522*^9}},ExpressionUUID->"1bf81257-f130-406d-bdb0-\
+674dbe7d2d45"],
+
+Cell[TextData[{
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"d", "\[VeryThinSpace]", "y"}], 
+       RowBox[{"d", "\[VeryThinSpace]", "x"}]], "+", 
+      RowBox[{
+       RowBox[{"P", "(", "x", ")"}], " ", "y"}]}], "=", 
+     RowBox[{"\[Delta]", "(", 
+      RowBox[{"x", "-", "a"}], ")"}]}], ","}], TraditionalForm]],
+  ExpressionUUID->"4e5aac78-4d26-4564-be45-5be1fffa94c5"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", ">", "0"}], ","}], TraditionalForm]],ExpressionUUID->
+  "225e8a0e-7782-4e9d-a180-a109092ba4b2"]
+}], "Equation",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601351675310769*^9, 3.601351712537424*^9}, {
+   3.601351750528537*^9, 3.601351781263363*^9}, {3.601351856909554*^9, 
+   3.601351858507062*^9}},ExpressionUUID->"30cf80f5-747c-4fc7-8c1f-\
+e46e2bc38ec2"],
+
+Cell[TextData[{
+ "with initial condition ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "0", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"a24e2280-17dc-4f8f-9108-a696d6fee6b6"],
+ " is called the ",
+ StyleBox["Green\[CloseCurlyQuote]s function,",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["G", "a"], "(", "x", ")"}], "."}], TraditionalForm]],
+  ExpressionUUID->"72d0a962-0fe2-486e-8e9d-321f13fe0da1"]
+}], "TextContinued",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601350637993101*^9, 3.601350700171681*^9}, {
+   3.6013508552104807`*^9, 3.601350905417781*^9}, {3.601351481967801*^9, 
+   3.601351522083728*^9}, {3.601351559130229*^9, 3.601351578446536*^9}, {
+   3.6013517286797028`*^9, 3.6013517396820927`*^9}, {3.601351798668385*^9, 
+   3.601351823394011*^9}, {3.6013518839642*^9, 3.601351891456923*^9}, {
+   3.6013523436083603`*^9, 3.6013523671446457`*^9}},
+ CellTags->
+  "Green's function",ExpressionUUID->"37a89ba2-4ec0-44a5-a1db-5995fdac7aaf"],
+
+Cell[TextData[{
+ StyleBox["Theorem.",
+  FontWeight->"Bold"],
+ " The Green\[CloseCurlyQuote]s function is given by\n\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["G", "a"], "(", "x", ")"}], "=", 
+    TagBox[GridBox[{
+       {"\[Piecewise]", GridBox[{
+          {"0", 
+           RowBox[{
+            RowBox[{"x", "<", "a"}], ","}]},
+          {
+           SuperscriptBox["e", 
+            RowBox[{"-", 
+             RowBox[{
+              SubsuperscriptBox["\[Integral]", 
+               RowBox[{"\[VeryThinSpace]", "a"}], "x"], 
+              RowBox[{
+               RowBox[{"P", "(", "t", ")"}], "\[ThinSpace]", "d", 
+               "\[VeryThinSpace]", "t"}]}]}]], 
+           RowBox[{"x", ">", 
+            RowBox[{"a", "."}]}]}
+         },
+         AllowedDimensions->{2, Automatic},
+         Editable->True,
+         GridBoxAlignment->{
+          "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{1.}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.84]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}},
+         Selectable->True]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.35]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}],
+     "Piecewise",
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False]}], TraditionalForm]],ExpressionUUID->
+  "f7db174c-b36d-477a-987f-0f78a7474b8a"]
+}], "Theorem",
+ CellChangeTimes->{
+  3.600128503624807*^9, {3.601352323538618*^9, 3.601352334338128*^9}, {
+   3.6013523731841803`*^9, 
+   3.601352475436583*^9}},ExpressionUUID->"6701110b-5161-496e-bec4-\
+324dcaebf409"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+ScreenStyleEnvironment->"Working",
+WindowSize->{1071, 776},
+WindowMargins->{{Automatic, 154}, {33, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+ShowSelection->True,
+ShowCellTags->True,
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"diffEqClass"}, "Diff Eq Style.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Dirac delta function"->{
+  Cell[22516, 605, 455, 15, 66, "Text",ExpressionUUID->"c9c3df3d-7f19-462a-bdc6-f8981c2e9666",
+   CellTags->"Dirac delta function"]},
+ "Green's function"->{
+  Cell[33796, 936, 1057, 27, 60, "TextContinued",ExpressionUUID->"37a89ba2-4ec0-44a5-a1db-5995fdac7aaf",
+   CellTags->"Green's function"]},
+ "phase flow"->{
+  Cell[6860, 169, 2598, 69, 278, "Text",ExpressionUUID->"fa49f700-fac3-4579-8a25-0c1b6ba1e29f",
+   CellTags->"phase flow"]},
+ "ref:lin:flow"->{
+  Cell[5754, 135, 1103, 32, 65, "EquationNumbered",ExpressionUUID->"ee306ec3-06bd-4243-b7fc-02a66f6bd3ab",
+   CellTags->"ref:lin:flow"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Dirac delta function", 37875, 1054},
+ {"Green's function", 38032, 1057},
+ {"phase flow", 38189, 1060},
+ {"ref:lin:flow", 38333, 1063}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 616, 9, 101, "Section",ExpressionUUID->"1b66d64b-32c6-4e0c-9c3a-23d6acdaf5f9"],
+Cell[1041, 26, 219, 5, 46, "Input",ExpressionUUID->"81f2d88b-8a07-4009-aeb8-30f3299c73fd"],
+Cell[1263, 33, 1767, 27, 359, "Text",ExpressionUUID->"fd925107-9412-40fe-8360-8f32ef3c0b9f"],
+Cell[CellGroupData[{
+Cell[3055, 64, 195, 4, 60, "Subsection",ExpressionUUID->"68282ca5-7ccf-4d70-b49c-9ed396782af4"],
+Cell[3253, 70, 261, 5, 67, "Subsubsection",ExpressionUUID->"0bf5de2d-0c23-4630-a42e-d5eb06f92a83"],
+Cell[CellGroupData[{
+Cell[3539, 79, 160, 3, 53, "Subsubsection",ExpressionUUID->"6b9a2fff-542f-4a59-84f0-3c06aae5dd33"],
+Cell[3702, 84, 2049, 49, 225, "Text",ExpressionUUID->"ecb7d748-28f8-4107-b6ca-f65343f6ac11"],
+Cell[5754, 135, 1103, 32, 65, "EquationNumbered",ExpressionUUID->"ee306ec3-06bd-4243-b7fc-02a66f6bd3ab",
+ CellTags->"ref:lin:flow"],
+Cell[6860, 169, 2598, 69, 278, "Text",ExpressionUUID->"fa49f700-fac3-4579-8a25-0c1b6ba1e29f",
+ CellTags->"phase flow"],
+Cell[9461, 240, 1254, 28, 49, "Theorem",ExpressionUUID->"796a7376-e70f-48ab-a306-a53a5376272c"],
+Cell[10718, 270, 1329, 38, 43, "ProofText",ExpressionUUID->"e120a9f9-a06f-4c1d-a9ba-dcf68ece7420"],
+Cell[12050, 310, 1555, 37, 79, "Theorem",ExpressionUUID->"2c677b78-ae03-4351-950f-f37ff25c17ee"],
+Cell[13608, 349, 2612, 74, 132, "ProofText",ExpressionUUID->"4bf86860-2087-4f06-987c-bd533caeecf4"],
+Cell[16223, 425, 1626, 28, 40, "Remark",ExpressionUUID->"44dcf8f7-66e1-4331-ab90-8a7970c2eb44"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17898, 459, 199, 4, 60, "Subsection",ExpressionUUID->"f1b169e4-2af7-483a-a931-9d6383569e19"],
+Cell[CellGroupData[{
+Cell[18122, 467, 325, 5, 67, "Subsubsection",ExpressionUUID->"82f68bb1-9000-4f15-9076-ca67eb61e4f8"],
+Cell[18450, 474, 334, 9, 46, "Input",ExpressionUUID->"772ea200-242d-4ca5-8240-5ff8f446fb44"],
+Cell[18787, 485, 1453, 47, 115, "Theorem",ExpressionUUID->"241e50ec-12e1-442d-8b86-f478a8aa4b7d"],
+Cell[20243, 534, 933, 28, 74, "Remark",ExpressionUUID->"8a5d72d3-10fe-4c67-b0f1-eae1c997c225"],
+Cell[21179, 564, 1003, 29, 85, "Text",ExpressionUUID->"759ef0ba-02a0-43d3-a4dc-c774134ece96"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22219, 598, 294, 5, 67, "Subsubsection",ExpressionUUID->"f02b31de-3a6b-4d0e-885e-3515afee9322"],
+Cell[22516, 605, 455, 15, 66, "Text",ExpressionUUID->"c9c3df3d-7f19-462a-bdc6-f8981c2e9666",
+ CellTags->"Dirac delta function"],
+Cell[22974, 622, 550, 18, 43, "TextContinued",ExpressionUUID->"d58f88c6-d51a-410e-ad8b-b21b22c9cc25"],
+Cell[23527, 642, 531, 16, 47, "TextContinued",ExpressionUUID->"600fee3a-9d13-40ef-b11d-d76ad7c9ea8b"],
+Cell[24061, 660, 294, 7, 77, "TextContinued",ExpressionUUID->"d491ecd0-7cfb-4414-9395-06c8e0ffb0f1"],
+Cell[24358, 669, 2250, 62, 67, "Equation",ExpressionUUID->"7a8f0b40-b68a-40b1-8312-c9a757f15581"],
+Cell[26611, 733, 477, 13, 43, "TextContinued",ExpressionUUID->"b837c236-f585-47d9-a3c6-71aa17fcd496"],
+Cell[27091, 748, 1164, 33, 55, "Equation",ExpressionUUID->"656aa6ff-3b4c-4526-8d5d-61e1f3e48c36"],
+Cell[28258, 783, 826, 22, 47, "Equation",ExpressionUUID->"9e5fb7fb-3e96-48d1-8919-521c4b53087f"],
+Cell[29087, 807, 2599, 68, 67, "Equation",ExpressionUUID->"1b49b17a-f757-4b33-a433-506ef0a277f2"],
+Cell[31689, 877, 1046, 23, 147, "TextContinued",ExpressionUUID->"3c6fdf01-302f-4472-9a11-302908cae508"],
+Cell[32738, 902, 195, 4, 48, "Text",ExpressionUUID->"1bf81257-f130-406d-bdb0-674dbe7d2d45"],
+Cell[32936, 908, 857, 26, 60, "Equation",ExpressionUUID->"30cf80f5-747c-4fc7-8c1f-e46e2bc38ec2"],
+Cell[33796, 936, 1057, 27, 60, "TextContinued",ExpressionUUID->"37a89ba2-4ec0-44a5-a1db-5995fdac7aaf",
+ CellTags->"Green's function"],
+Cell[34856, 965, 2443, 67, 150, "Theorem",ExpressionUUID->"6701110b-5161-496e-bec4-324dcaebf409"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
