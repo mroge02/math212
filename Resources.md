@@ -14,9 +14,18 @@
 ### Asymptotic series
 - Boyd, [The Devil’s Invention: Asymptotic, Superasymptotic and Hyperasymptotic Series](http://www-personal.umich.edu/~jpboyd/boydactaapplicreview.pdf), [SpringerLink](https://link.springer.com/article/10.1023/A:1006145903624) (1999)
 
+### Linear
+
+- Venkataramana, [Differential Equations and Monodromy](https://arxiv.org/pdf/1911.02840.pdf) (2019)
+ 
+### First integrals and invariants
+
+- Prelle and Singer, [Elementary First Integrals of Differential Equations](https://www-jstor-org.proxy.library.emory.edu/stable/1999380?seq=1#metadata_info_tab_contents) (1983)
+
 ### Symmetry
 
 - Burkman, [Symmetry Group Solutions To Differential Equations–A Historical Perspective](https://math.hawaii.edu/home/talks/burkman_master_talk.pdf) (2007)
+- Cantwell [Introduction to Symmetry Analysis](https://web.stanford.edu/~cantwell/AA218_Course_Material/Lectures/Symmetry_Analysis_Chapter_01_Introduction_BJ_Cantwell.pdf) (2018) — Course notes, Stanford Aeronautics & Astronautics.
 - Doran-Wu, [...A Potential Symmetries Classification of PDEs](https://www.iam.ubc.ca/wp-content/uploads/2018/10/PDoran-Wu_PhD_Thesis-4.pdf) — Ph.D.
 - Hydon, [Symmetry Methods for Differential Equations](https://pdfs.semanticscholar.org/c09c/e38e7fe493e09a05158572c03211ac6eb031.pdf) (2000) — "A Beginner's Guide."
 - Hydon, [An introduction to symmetry methods...in chemistry and chemical biology](https://www.kent.ac.uk/smsas/personal/ph282/papers/IJQC05corrected.pdf) (2005)
@@ -38,7 +47,7 @@
 - [Bibliography for the Duffing Equation](http://mathfaculty.fullerton.edu/mathews/n2003/duffing/DuffingBib/Links/DuffingBib_lnk_3.html).
 - ["applications of duffing equation"](https://www.google.com/search?q=applications+of+duffing+equation&client=safari&rls=en&ei=2p8BXY_8Dou4sgWZjJGYBA&start=10&sa=N&ved=0ahUKEwiP0Z_LoOXiAhULnKwKHRlGBEMQ8NMDCJAB&biw=1157&bih=939&dpr=2) (Google search).
 - [Nonlinear Oscillators](http://mafija.fmf.uni-lj.si/seminar/files/2014_2015/seminar_Nonlinear_Oscillators.pdf) (Duffing, van der Pol, Lorenz).
-- 
+
 
 ## Projects
 
