@@ -27,10 +27,10 @@
 
 - Burkman, [Symmetry Group Solutions To Differential Equations–A Historical Perspective](https://math.hawaii.edu/home/talks/burkman_master_talk.pdf) (2007)
 - Cantwell [Introduction to Symmetry Analysis](https://web.stanford.edu/~cantwell/AA218_Course_Material/Lectures/Symmetry_Analysis_Chapter_01_Introduction_BJ_Cantwell.pdf) (2018) — Course notes, Stanford Aeronautics & Astronautics.
-- Doran-Wu, [...A Potential Symmetries Classification of PDEs](https://www.iam.ubc.ca/wp-content/uploads/2018/10/PDoran-Wu_PhD_Thesis-4.pdf) — Ph.D.
+- Doran-Wu, [...A Potential Symmetries Classification of PDEs](https://www.iam.ubc.ca/wp-content/uploads/2018/10/PDoran-Wu_PhD_Thesis-4.pdf) (1996) — Ph.D.
 - Hydon, [Symmetry Methods for Differential Equations](https://pdfs.semanticscholar.org/c09c/e38e7fe493e09a05158572c03211ac6eb031.pdf) (2000) — "A Beginner's Guide."
 - Hydon, [An introduction to symmetry methods...in chemistry and chemical biology](https://www.kent.ac.uk/smsas/personal/ph282/papers/IJQC05corrected.pdf) (2005)
-- Fokas, [Invariants, Lie-Bäcklun Operators...](https://thesis.library.caltech.edu/7543/1/Fokas_as_1979.pdf) — Ph.D. thesis.
+- Fokas, [Invariants, Lie-Bäcklun Operators...](https://thesis.library.caltech.edu/7543/1/Fokas_as_1979.pdf) (1979) — Ph.D. thesis.
 - Steinberg et al., [Practical Guide to the Symbolic Computation of Symmetries of Differential Equations](https://arxiv.org/pdf/1409.8364.pdf) (1990, 2014, 2018)
 - Steinhour, [The Truth About Lie Symmetries](https://openworks.wooster.edu/cgi/viewcontent.cgi?article=1948&context=independentstudy) (2013) — Senior thesis.
 - C E Wulfman and B G Wybourne, [The Lie group of Newton's and Lagrange's equations for the harmonic oscillator](https://web.stanford.edu/~cantwell/AA218_Course_Material/Wulfman_1976_J._Phys._A_Harmonic_Oscillator.pdf) (1976) — Also has links to other problems
@@ -50,10 +50,11 @@
 - [Nonlinear Oscillators](http://mafija.fmf.uni-lj.si/seminar/files/2014_2015/seminar_Nonlinear_Oscillators.pdf) (Duffing, van der Pol, Lorenz).
 
 
-## Projects
+## Projects and applications
 
 -  Internet Differential Equations Activities, [IDEA Projects](http://www.idea.wsu.edu/projects.php)  (WSU, NSF, ca. 1997) — Mainly short projects of varying sophistication.
 - [Articles in *CMJ* on DEs](https://www.geneseo.edu/~leary/PCMI2001/index.html) contain project ideas.
+- Hackborn, William W.; Reznychenko, Tetiana; and Zhang, Yihang (2019) ["Consensus Building by Committed Agents,"](https://scholarship.claremont.edu/codee/vol12/iss1/2) _CODEE Journal_: Vol. 12, Article 2.  
 
 ## Teaching
 
@@ -66,6 +67,7 @@
 - http://archives.math.utk.edu/topics/ordinaryDiffEq.html
 - [Articles in *CMJ* on DEs](https://www.geneseo.edu/~leary/PCMI2001/index.html) 
 - https://www.math24.net/topics-differential-equations/
+- [CODEE Journal](https://scholarship.claremont.edu/codee/)
 
 
 
