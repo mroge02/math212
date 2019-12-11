@@ -6,7 +6,7 @@
 
 - Bernoulli, [General method for solving all differential equations of the first order](https://books.google.com/books?id=Fsmu702UwtwC&pg=PA123&lpg=PA123) (1694).
 - Clairaut (1734) [Clairaut's equation](https://gallica.bnf.fr/ark:/12148/bpt6k3531x/f354.image)
-- Lindelöf (Picard) [](https://github.com/mroge02/math212/blob/master/Lindelof1894-Translation.pdf)
+- [Lindelöf (Picard)](https://github.com/mroge02/math212/blob/master/Lindelof1894-Translation.pdf)
 - Parker (2013) [Who Solved the Bernoulli Equation...](https://www.maa.org/sites/default/files/pdf/upload_library/2/Parker-CMJ-2014.pdf)
 
 ### Discontinuous DEs
