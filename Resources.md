@@ -17,6 +17,7 @@
 ### Linear
 
 - Venkataramana, [Differential Equations and Monodromy](https://arxiv.org/pdf/1911.02840.pdf) (2019)
+- Fasi and Higham, [...the Matrix Exponential](https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/18M1228876) (2019).
  
 ### First integrals and invariants
 
@@ -54,13 +55,11 @@
 -  Internet Differential Equations Activities, [IDEA Projects](http://www.idea.wsu.edu/projects.php)  (WSU, NSF, ca. 1997) — Mainly short projects of varying sophistication.
 - [Articles in *CMJ* on DEs](https://www.geneseo.edu/~leary/PCMI2001/index.html) contain project ideas.
 
-## Supplementary textbooks
-
-- Trefethen, [*Exploring ODEs*](http://people.maths.ox.ac.uk/trefethen/Exploring.pdf) — MATLAB/Chebfun approach that explores concepts in ODEs assuming one can solve (almost) any ODE with a simple numerical computer command.
-
 ## Teaching
 
-- [Rota, Ten Lessons](https://github.com/mroge02/math212/blob/master/Rota1997-TenLessons.pdf) — Advice on teaching diffferential equations
+- Trefethen, [*Exploring ODEs*](http://people.maths.ox.ac.uk/trefethen/Exploring.pdf) — MATLAB/Chebfun approach that explores concepts in ODEs assuming one can solve (almost) any ODE with a simple numerical computer command.
+- [Rota, Ten Lessons](https://github.com/mroge02/math212/blob/master/Rota1997-TenLessons.pdf) (1997) — Advice on teaching diffferential equations
+- Mokhasi, Adduci and Kapadia, [Understanding Differential Equations Using Mathematica and Interactive Demonstrations](https://pdfs.semanticscholar.org/f0e1/d2347de095e06cd9b8d8d3cae30c6ba0ac07.pdf) (2012).
 
 ## Other lists of resources
 
