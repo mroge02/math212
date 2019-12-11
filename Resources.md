@@ -28,6 +28,18 @@
 
 ### Duffing equation
 
+ - [The Duffing Equation: Nonlinear Oscillators and their Behaviour](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
+     - [Translation of sections from Duffing’s original book](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdfdirect/10.1002/9780470977859.app1)
+     - [Examples of physical systems described by the Duffing equation](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch2)
+    - [On Georg Duffing and the Duffing Equation](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
+- Duffing, [Erzwungene schwingungen bei veränderlicher eigenfrequenz und ihre technische bedeutung](https://www.worldcat.org/title/erzwungene-schwingungen-bei-veranderlicher-eigenfrequenz-und-ihre-technische-bedeutung/oclc/12003652) (1918).
+- [Duffing Equation](https://en.wikipedia.org/wiki/Duffing_equation) (Wikipedia).
+- [Duffing oscillator](http://www.scholarpedia.org/article/Duffing_oscillator) (Scholarpaedia).
+- [Bibliography for the Duffing Equation](http://mathfaculty.fullerton.edu/mathews/n2003/duffing/DuffingBib/Links/DuffingBib_lnk_3.html).
+- ["applications of duffing equation"](https://www.google.com/search?q=applications+of+duffing+equation&client=safari&rls=en&ei=2p8BXY_8Dou4sgWZjJGYBA&start=10&sa=N&ved=0ahUKEwiP0Z_LoOXiAhULnKwKHRlGBEMQ8NMDCJAB&biw=1157&bih=939&dpr=2) (Google search).
+- [Nonlinear Oscillators](http://mafija.fmf.uni-lj.si/seminar/files/2014_2015/seminar_Nonlinear_Oscillators.pdf) (Duffing, van der Pol, Lorenz).
+- 
+
 ## Projects
 
 -  Internet Differential Equations Activities, [IDEA Projects](http://www.idea.wsu.edu/projects.php)  (WSU, NSF, ca. 1997) — Mainly short projects of varying sophistication.
