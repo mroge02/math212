@@ -4,7 +4,7 @@
 
 ### First-order ODEs
 
-- Bernoulli, [General method for solving any differential equation](https://books.google.com/books?id=Fsmu702UwtwC&pg=PA123&lpg=PA123&dq=bernoulli+modus+generalis+construendi+aequationes+differentiales&source=bl&ots=m1Igg6gZZr&sig=H1kg1limHkbO6UTZ0TzUifyUDII&hl=en&sa=X&ved=0ahUKEwjz9beR3LvRAhXL7IMKHZxcBe0Q6AEIQDAH#v=onepage&q=bernoulli%20modus%20generalis%20construendi%20aequationes%20differentiales&f=false)
+- Bernoulli, [General method for solving any differential equation](https://books.google.com/books?id=Fsmu702UwtwC&pg=PA123&lpg=PA123) (1696).
 - Clairaut (1734) [Clairaut's equation](https://gallica.bnf.fr/ark:/12148/bpt6k3531x/f354.image)
 - Parker (2013) [Who Solved the Bernoulli Equation...](https://www.maa.org/sites/default/files/pdf/upload_library/2/Parker-CMJ-2014.pdf)
 
