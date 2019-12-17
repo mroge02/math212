@@ -71,6 +71,10 @@
 - https://www.math24.net/topics-differential-equations/
 - [CODEE Journal](https://scholarship.claremont.edu/codee/)
 
+## Misc
+
+- [A UNIVERSAL ORDINARY DIFFERENTIAL EQUATION](https://arxiv.org/pdf/1702.08328.pdf)
+
 
 
 > Written with [StackEdit](https://stackedit.io/).
