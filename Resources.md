@@ -74,6 +74,7 @@
 ## Misc
 
 - [A UNIVERSAL ORDINARY DIFFERENTIAL EQUATION](https://arxiv.org/pdf/1702.08328.pdf)
+- [SCUDEM - SIMIODE Challenge](https://www.simiode.org/scudem/scudem-ii-2018-competition/host-sites)
 
 
 
