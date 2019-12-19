@@ -8,3 +8,4 @@ The current release is intended to make available to students and the instructor
 The paclet is not being maintained currently through Github, but may be obtained via
 
     PacletInstall@"http://www.wolframcloud.com/obj/mroge02/math212/diffEqClass.paclet"
+
