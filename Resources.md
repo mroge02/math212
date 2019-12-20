@@ -38,6 +38,10 @@
 - C E Wulfman and B G Wybourne, [The Lie group of Newton's and Lagrange's equations for the harmonic oscillator](https://web.stanford.edu/~cantwell/AA218_Course_Material/Wulfman_1976_J._Phys._A_Harmonic_Oscillator.pdf) (1976) — Also has links to other problems
 - G E Prince and C J Eliezer, [On the Lie symmetries of the classical Kepler problem](https://iopscience.iop.org/article/10.1088/0305-4470/14/3/009) (1981)
 
+### Numerical methods
+
+- 2nd order RK, https://lpsa.swarthmore.edu/NumInt/NumIntSecond.html
+
 ### Duffing equation
 
  - [The Duffing Equation: Nonlinear Oscillators and their Behaviour](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
@@ -76,6 +80,7 @@
 
 - [A UNIVERSAL ORDINARY DIFFERENTIAL EQUATION](https://arxiv.org/pdf/1702.08328.pdf)
 - [SCUDEM - SIMIODE Challenge](https://www.simiode.org/scudem/scudem-ii-2018-competition/host-sites)
+- Kovacic, [Algorithm for solving 2nd ord. lin. d.e.](https://www.sciencedirect.com/science/article/pii/S0747717186800104)
 
 
 
