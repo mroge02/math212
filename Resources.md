@@ -37,6 +37,7 @@
 - Steinhour, [The Truth About Lie Symmetries](https://openworks.wooster.edu/cgi/viewcontent.cgi?article=1948&context=independentstudy) (2013) — Senior thesis.
 - C E Wulfman and B G Wybourne, [The Lie group of Newton's and Lagrange's equations for the harmonic oscillator](https://web.stanford.edu/~cantwell/AA218_Course_Material/Wulfman_1976_J._Phys._A_Harmonic_Oscillator.pdf) (1976) — Also has links to other problems
 - G E Prince and C J Eliezer, [On the Lie symmetries of the classical Kepler problem](https://iopscience.iop.org/article/10.1088/0305-4470/14/3/009) (1981)
+- https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages
 
 ### Numerical methods
 
@@ -55,6 +56,9 @@
 - ["applications of duffing equation"](https://www.google.com/search?q=applications+of+duffing+equation&client=safari&rls=en&ei=2p8BXY_8Dou4sgWZjJGYBA&start=10&sa=N&ved=0ahUKEwiP0Z_LoOXiAhULnKwKHRlGBEMQ8NMDCJAB&biw=1157&bih=939&dpr=2) (Google search).
 - [Nonlinear Oscillators](http://mafija.fmf.uni-lj.si/seminar/files/2014_2015/seminar_Nonlinear_Oscillators.pdf) (Duffing, van der Pol, Lorenz).
 
+### Bifurcation
+
+- https://www.johndcook.com/blog/2020/01/22/ode-bifurcation-example/
 
 ## Projects and applications
 
@@ -81,6 +85,7 @@
 - [A UNIVERSAL ORDINARY DIFFERENTIAL EQUATION](https://arxiv.org/pdf/1702.08328.pdf)
 - [SCUDEM - SIMIODE Challenge](https://www.simiode.org/scudem/scudem-ii-2018-competition/host-sites)
 - Kovacic, [Algorithm for solving 2nd ord. lin. d.e.](https://www.sciencedirect.com/science/article/pii/S0747717186800104)
+- [Visual DSolve](http://www.karlin.mff.cuni.cz/~slavik/visualdsolve/)
 
 
 
