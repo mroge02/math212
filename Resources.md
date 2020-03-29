@@ -8,6 +8,7 @@
 - Clairaut (1734) [Clairaut's equation](https://gallica.bnf.fr/ark:/12148/bpt6k3531x/f354.image)
 - [Lindelöf (Picard)](https://github.com/mroge02/math212/blob/master/Lindelof1894-Translation.pdf)
 - Parker (2013) [Who Solved the Bernoulli Equation...](https://www.maa.org/sites/default/files/pdf/upload_library/2/Parker-CMJ-2014.pdf)
+- Differential forms https://math.stackexchange.com/questions/3598325/justifying-the-physicists-method-for-odes-using-differential-forms
 
 ### Discontinuous DEs
 
