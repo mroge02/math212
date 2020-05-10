@@ -39,6 +39,7 @@
 - C E Wulfman and B G Wybourne, [The Lie group of Newton's and Lagrange's equations for the harmonic oscillator](https://web.stanford.edu/~cantwell/AA218_Course_Material/Wulfman_1976_J._Phys._A_Harmonic_Oscillator.pdf) (1976) — Also has links to other problems
 - G E Prince and C J Eliezer, [On the Lie symmetries of the classical Kepler problem](https://iopscience.iop.org/article/10.1088/0305-4470/14/3/009) (1981)
 - https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages
+- Miller, [*Symmetry and the Separation of Variables*](http://www-users.math.umn.edu/~mille003/separationofvariables.html) (1977).
 
 ### Numerical methods
 
