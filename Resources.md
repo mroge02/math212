@@ -68,6 +68,7 @@
 - [Articles in *CMJ* on DEs](https://www.geneseo.edu/~leary/PCMI2001/index.html) contain project ideas.
 - Hackborn, William W.; Reznychenko, Tetiana; and Zhang, Yihang (2019) ["Consensus Building by Committed Agents,"](https://scholarship.claremont.edu/codee/vol12/iss1/2) _CODEE Journal_: Vol. 12, Article 2.  
 - [Hearing the Shape of a Triangle](http://www.ams.org/notices/201311/rnoti-p1440.pdf)
+- [Oscillating chemical reactions (OCRs)](https://pubs.acs.org/doi/pdf/10.1021/ed300227w), *J. Chem. Educ* 2013, 90, 82−89.
 
 ## Teaching
 
