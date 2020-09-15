@@ -40,10 +40,13 @@
 - G E Prince and C J Eliezer, [On the Lie symmetries of the classical Kepler problem](https://iopscience.iop.org/article/10.1088/0305-4470/14/3/009) (1981)
 - https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages
 - Miller, [*Symmetry and the Separation of Variables*](http://www-users.math.umn.edu/~mille003/separationofvariables.html) (1977).
+- [The Helmholtz Equation](http://www-users.math.umn.edu/~mille003/ssv1.pdf) from Willard Miller, ["Symmetry and Separation of Variables"](https://doi.org/10.1017/CBO9781107325623), [*Encyclopedia of Mathematics and Its Applications*](https://www.cambridge.org/core/series/encyclopedia-of-mathematics-and-its-applications/14161A9F36D6D0C9A650A4F86F74162D), v4 (1977)
+- Yap, [Visualizing and Utilizing Symmetries of Differential Equations](https://www.maa.org/press/periodicals/visualizing-and-utilizing-symmetries-of-differential-equations)
 
 ### Numerical methods
 
 - 2nd order RK, https://lpsa.swarthmore.edu/NumInt/NumIntSecond.html
+- [Gauss-Jackson](https://www.johndcook.com/blog/2020/06/16/nasas-favorite-ode-solver/)
 
 ### Duffing equation
 
@@ -68,13 +71,23 @@
 - [Articles in *CMJ* on DEs](https://www.geneseo.edu/~leary/PCMI2001/index.html) contain project ideas.
 - Hackborn, William W.; Reznychenko, Tetiana; and Zhang, Yihang (2019) ["Consensus Building by Committed Agents,"](https://scholarship.claremont.edu/codee/vol12/iss1/2) _CODEE Journal_: Vol. 12, Article 2.  
 - [Hearing the Shape of a Triangle](http://www.ams.org/notices/201311/rnoti-p1440.pdf)
+- [SIMIODE Remote Teaching Modules](https://www.simiode.org/modules) (requires registration).
+
+### Oregonator, BZ, OCRs
+
 - [Oscillating chemical reactions (OCRs)](https://pubs.acs.org/doi/pdf/10.1021/ed300227w), *J. Chem. Educ* 2013, 90, 82−89.
+- [Lyapunov exponents and the Belousov-Zhabotinsky oscillator](http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S0379-43502017000100011),*S.Afr.j.chem.* (Online) vol.70 Durban 2017;  http://dx.doi.org/10.17159/0379-4350/2017/v70a11
+- J.D.Murray, [On a model for the temporal oscillations in the Belousov-Zhabotinsky reaction](https://aip-scitation-org.proxy.library.emory.edu/doi/pdf/10.1063/1.1682542), *J. Chem. Phys.* 61, 3610 (1974); [https://doi-org.proxy.library.emory.edu/10.1063/1.1682542](https://doi-org.proxy.library.emory.edu/10.1063/1.1682542)
+- Brøns *et al.*,[Circle Maps and the Devil's Staircase in a Periodically Perturbed Oregonator](https://www.researchgate.net/publication/260456611_Circle_Maps_and_the_Devil%27s_Staircase_in_a_Periodically_Perturbed_Oregonator), [International Journal of Bifurcation and Chaos](https://www.researchgate.net/publication/journal/0218-1274_International_Journal_of_Bifurcation_and_Chaos)  7(11) (1997) 2621-2628
+- Esen *et al.*, [On integrals, Hamiltonian and metriplectic formulations of polynomial systems in 3D](https://doi.org/10.2298/TAM161118001E). Theoretical and Applied Mechanics 2017 Volume 44, Issue 1, Pages: 15-34 ([PDF](http://www.doiserbia.nb.rs/img/doi/1450-5584/2017/1450-55841700001E.pdf))
+- H. Qian and J.D. Murray, [A Simple Method of Parameter Space Determination for Diffusion-Driven Instability with Three Species](https://core.ac.uk/download/pdf/82223495.pdf) *Applied Mathematics Letters* 14 (2001) 405-411
 
 ## Teaching
 
 - Trefethen, [*Exploring ODEs*](http://people.maths.ox.ac.uk/trefethen/Exploring.pdf) — MATLAB/Chebfun approach that explores concepts in ODEs assuming one can solve (almost) any ODE with a simple numerical computer command.
 - [Rota, Ten Lessons](https://github.com/mroge02/math212/blob/master/Rota1997-TenLessons.pdf) (1997) — Advice on teaching diffferential equations
 - Mokhasi, Adduci and Kapadia, [Understanding Differential Equations Using Mathematica and Interactive Demonstrations](https://pdfs.semanticscholar.org/f0e1/d2347de095e06cd9b8d8d3cae30c6ba0ac07.pdf) (2012).
+- Sanchez, [*ODEs*](http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/openurl?http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/login.do?ctx_enc=info:ofi/enc:UTF-8&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.stitle=Classroom%20Resource%20Materials%20Series.&amp=&ctx_ver=Z39.88-2004&rft.isbn=0883857235&isSerivcesPage=true&rft.auinitm=A&rft.genre=book&rft.aufirst=David&dscnt=0&rft.auinit1=D&url_ctx_fmt=null&initializeIndex=true&vid=01EMORY_services_page&institution=01EMORY&fromLogin=true&dstmp=1599855706009&rft_id=urn:ISBN:0-88385-723-5&rfr_id=info:sid/ams.org:MathSciNet&rft.aulast=S%EF%BF%BDnchez&rft.auinit=DA&rft.date=2002&institute=&rft.title=Ordinary%20differential%20equations&fromLogin=true),[**MR1903201**](https://mathscinet-ams-org.proxy.library.emory.edu/mathscinet/search/publdoc.html?arg3=&co4=AND&co5=AND&co6=AND&co7=AND&dr=all&pg4=AUCN&pg5=TI&pg6=CC&pg7=MR&pg8=ET&r=1&review_format=html&s4=&s5=&s6=&s7=MR1903201&s8=All&sort=Newest&vfpref=html&yearRangeFirst=&yearRangeSecond=&yrop=eq)
 
 ## Other lists of resources
 
@@ -89,6 +102,8 @@
 - [SCUDEM - SIMIODE Challenge](https://www.simiode.org/scudem/scudem-ii-2018-competition/host-sites)
 - Kovacic, [Algorithm for solving 2nd ord. lin. d.e.](https://www.sciencedirect.com/science/article/pii/S0747717186800104)
 - [Visual DSolve](http://www.karlin.mff.cuni.cz/~slavik/visualdsolve/)
+- Synchronization of weakly coupled oscillators, https://twitter.com/alek_thiery/status/1263143529120796672
+- Chris K's [EcoEvo package](https://github.com/cklausme/EcoEvo)
 
 
 
