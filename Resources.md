@@ -41,7 +41,8 @@
 - https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages
 - Miller, [*Symmetry and the Separation of Variables*](http://www-users.math.umn.edu/~mille003/separationofvariables.html) (1977).
 - [The Helmholtz Equation](http://www-users.math.umn.edu/~mille003/ssv1.pdf) from Willard Miller, ["Symmetry and Separation of Variables"](https://doi.org/10.1017/CBO9781107325623), [*Encyclopedia of Mathematics and Its Applications*](https://www.cambridge.org/core/series/encyclopedia-of-mathematics-and-its-applications/14161A9F36D6D0C9A650A4F86F74162D), v4 (1977)
-- Yap, [Visualizing and Utilizing Symmetries of Differential Equations](https://www.maa.org/press/periodicals/visualizing-and-utilizing-symmetries-of-differential-equations)
+- Yap, [Visualizing and Utilizing Symmetries of Differential Equations](https://www.maa.org/press/periodicals/visualizing-and-utilizing-symmetries-of-differential-equations); [Desmos demo](https://www.desmos.com/calculator/jzgdl06ec7)
+- Yap, [Differential Equations—Not Just a Bag of Tricks!](https://www-jstor-org.proxy.library.emory.edu/stable/10.4169/002557010x479947#metadata_info_tab_contents)
 
 ### Numerical methods
 
