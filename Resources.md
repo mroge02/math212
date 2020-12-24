@@ -49,6 +49,7 @@
 
 - 2nd order RK, https://lpsa.swarthmore.edu/NumInt/NumIntSecond.html
 - [Gauss-Jackson](https://www.johndcook.com/blog/2020/06/16/nasas-favorite-ode-solver/)
+- Stiffness: [Stiffness](https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/), [Cleve's Corner](https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/)
 
 ### Duffing equation
 
@@ -111,5 +112,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NTc4NzAwXX0=
+eyJoaXN0b3J5IjpbLTE4NzE0MDA3MDksLTM0NTc4NzAwXX0=
 -->
