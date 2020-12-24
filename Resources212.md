@@ -57,7 +57,7 @@
      - [Translation of sections from Duffing’s original book](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdfdirect/10.1002/9780470977859.app1)
      - [Examples of physical systems described by the Duffing equation](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch2)
     - [On Georg Duffing and the Duffing Equation](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
-- Duffing, [Erzwungene schwingungen bei veränderlicher eigenfrequenz und ihre technische bedeutung](https://www.worldcat.org/title/erzwungene-schwingungen-bei-veranderlicher-eigenfrequenz-und-ihre-technische-bedeutung/oclc/12003652) (1918).
+- Duffing, [Erzwungene schwingungen bei veränderlicher eigenfrequenz und ihre technische bedeutung](https://www.worldcat.org/title/erzwungene-schwingungen-bei-veranderlicher-eigenfrequenz-und-ihre-technische-bedeutung/oclc/12003652) (1918).
 - [Duffing Equation](https://en.wikipedia.org/wiki/Duffing_equation) (Wikipedia).
 - [Duffing oscillator](http://www.scholarpedia.org/article/Duffing_oscillator) (Scholarpaedia).
 - [Bibliography for the Duffing Equation](http://mathfaculty.fullerton.edu/mathews/n2003/duffing/DuffingBib/Links/DuffingBib_lnk_3.html).
