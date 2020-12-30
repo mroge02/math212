@@ -49,7 +49,7 @@
 
 - 2nd order RK, https://lpsa.swarthmore.edu/NumInt/NumIntSecond.html
 - [Gauss-Jackson](https://www.johndcook.com/blog/2020/06/16/nasas-favorite-ode-solver/)
-- Stiffness: [John D Cook blog](https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/), [Cleve's Corner](https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/)
+- Stiffness: [John D Cook blog](https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/), [Cleve's Corner](https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/), [Hindmarsh 1986](https://computing.llnl.gov/casc/nsde/pubs/200849.pdf), [Shampine 1979](https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/1021001), [Shampine 1977](https://dl-acm-org.proxy.library.emory.edu/doi/pdf/10.1145/355719.355722)
 
 ### Duffing equation
 
@@ -57,7 +57,7 @@
      - [Translation of sections from Duffing’s original book](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdfdirect/10.1002/9780470977859.app1)
      - [Examples of physical systems described by the Duffing equation](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch2)
     - [On Georg Duffing and the Duffing Equation](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
-- Duffing, [Erzwungene schwingungen bei veränderlicher eigenfrequenz und ihre technische bedeutung](https://www.worldcat.org/title/erzwungene-schwingungen-bei-veranderlicher-eigenfrequenz-und-ihre-technische-bedeutung/oclc/12003652) (1918).
+- Duffing, [Erzwungene schwingungen bei veränderlicher eigenfrequenz und ihre technische bedeutung](https://www.worldcat.org/title/erzwungene-schwingungen-bei-veranderlicher-eigenfrequenz-und-ihre-technische-bedeutung/oclc/12003652) (1918).
 - [Duffing Equation](https://en.wikipedia.org/wiki/Duffing_equation) (Wikipedia).
 - [Duffing oscillator](http://www.scholarpedia.org/article/Duffing_oscillator) (Scholarpaedia).
 - [Bibliography for the Duffing Equation](http://mathfaculty.fullerton.edu/mathews/n2003/duffing/DuffingBib/Links/DuffingBib_lnk_3.html).
@@ -112,5 +112,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MTQ0MjUyOV19
+eyJoaXN0b3J5IjpbNjkyMzExNzhdfQ==
 -->
