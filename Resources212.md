@@ -75,6 +75,7 @@
 - Hackborn, William W.; Reznychenko, Tetiana; and Zhang, Yihang (2019) ["Consensus Building by Committed Agents,"](https://scholarship.claremont.edu/codee/vol12/iss1/2) _CODEE Journal_: Vol. 12, Article 2.  
 - [Hearing the Shape of a Triangle](http://www.ams.org/notices/201311/rnoti-p1440.pdf)
 - [SIMIODE Remote Teaching Modules](https://www.simiode.org/modules) (requires registration).
+- [Romik, Moving sofa problem](https://arxiv.org/abs/1606.08111)
 
 ### Oregonator, BZ, OCRs
 
@@ -112,5 +113,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkyMzExNzhdfQ==
+eyJoaXN0b3J5IjpbNjMxOTExNzM5LDY5MjMxMTc4XX0=
 -->
