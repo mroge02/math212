@@ -92,6 +92,8 @@
 - [Rota, Ten Lessons](https://github.com/mroge02/math212/blob/master/Rota1997-TenLessons.pdf) (1997) — Advice on teaching diffferential equations
 - Mokhasi, Adduci and Kapadia, [Understanding Differential Equations Using Mathematica and Interactive Demonstrations](https://pdfs.semanticscholar.org/f0e1/d2347de095e06cd9b8d8d3cae30c6ba0ac07.pdf) (2012).
 - Sanchez, [*ODEs*](http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/openurl?http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/login.do?ctx_enc=info:ofi/enc:UTF-8&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.stitle=Classroom%20Resource%20Materials%20Series.&amp=&ctx_ver=Z39.88-2004&rft.isbn=0883857235&isSerivcesPage=true&rft.auinitm=A&rft.genre=book&rft.aufirst=David&dscnt=0&rft.auinit1=D&url_ctx_fmt=null&initializeIndex=true&vid=01EMORY_services_page&institution=01EMORY&fromLogin=true&dstmp=1599855706009&rft_id=urn:ISBN:0-88385-723-5&rfr_id=info:sid/ams.org:MathSciNet&rft.aulast=S%EF%BF%BDnchez&rft.auinit=DA&rft.date=2002&institute=&rft.title=Ordinary%20differential%20equations&fromLogin=true),[**MR1903201**](https://mathscinet-ams-org.proxy.library.emory.edu/mathscinet/search/publdoc.html?arg3=&co4=AND&co5=AND&co6=AND&co7=AND&dr=all&pg4=AUCN&pg5=TI&pg6=CC&pg7=MR&pg8=ET&r=1&review_format=html&s4=&s5=&s6=&s7=MR1903201&s8=All&sort=Newest&vfpref=html&yearRangeFirst=&yearRangeSecond=&yrop=eq)
+- [Decker and Albright (textbook)](http://professorrdecker.x10host.com/DeckerAlbright.pdf)
+- 
 
 ## Other lists of resources
 
@@ -113,5 +115,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxOTExNzM5XX0=
+eyJoaXN0b3J5IjpbLTg4MjAwNzk3OCw2MzE5MTE3MzldfQ==
 -->
