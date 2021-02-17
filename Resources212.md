@@ -111,10 +111,11 @@
 - [Visual DSolve](http://www.karlin.mff.cuni.cz/~slavik/visualdsolve/)
 - Synchronization of weakly coupled oscillators, https://twitter.com/alek_thiery/status/1263143529120796672
 - Chris K's [EcoEvo package](https://github.com/cklausme/EcoEvo)
+- [nLab](https://ncatlab.org/nlab/show/differential+equation)
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTA4NDc4MV19
+eyJoaXN0b3J5IjpbLTEyNjc4NTA3MTksMTMwMTA4NDc4MV19
 -->
