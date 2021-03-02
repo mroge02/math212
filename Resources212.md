@@ -76,6 +76,7 @@
 - [Hearing the Shape of a Triangle](http://www.ams.org/notices/201311/rnoti-p1440.pdf)
 - [SIMIODE Remote Teaching Modules](https://www.simiode.org/modules) (requires registration).
 - [Romik, Moving sofa problem](https://arxiv.org/abs/1606.08111)
+- [Chen *et al.*, Neural Ordinary Differential Equations (2019)](https://arxiv.org/pdf/1806.07366.pdf)
 
 ### Oregonator, BZ, OCRs
 
@@ -117,5 +118,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjc4NTA3MTldfQ==
+eyJoaXN0b3J5IjpbLTUwNjg3MTcxMSwtMTI2Nzg1MDcxOV19
 -->
