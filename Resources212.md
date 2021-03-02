@@ -118,5 +118,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNjg3MTcxMSwtMTI2Nzg1MDcxOV19
+eyJoaXN0b3J5IjpbLTUwNjg3MTcxMV19
 -->
