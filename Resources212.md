@@ -113,10 +113,11 @@
 - Synchronization of weakly coupled oscillators, https://twitter.com/alek_thiery/status/1263143529120796672
 - Chris K's [EcoEvo package](https://github.com/cklausme/EcoEvo)
 - [nLab](https://ncatlab.org/nlab/show/differential+equation)
+- [Maximum principle](https://www.johndcook.com/blog/2016/02/10/maximum-principle-and-approximating-boundary-value-problems/)
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNjg3MTcxMV19
+eyJoaXN0b3J5IjpbLTE5NzQxMDE2NDJdfQ==
 -->
