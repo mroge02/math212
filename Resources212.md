@@ -87,6 +87,9 @@
 - Esen *et al.*, [On integrals, Hamiltonian and metriplectic formulations of polynomial systems in 3D](https://doi.org/10.2298/TAM161118001E). Theoretical and Applied Mechanics 2017 Volume 44, Issue 1, Pages: 15-34 ([PDF](http://www.doiserbia.nb.rs/img/doi/1450-5584/2017/1450-55841700001E.pdf))
 - H. Qian and J.D. Murray, [A Simple Method of Parameter Space Determination for Diffusion-Driven Instability with Three Species](https://core.ac.uk/download/pdf/82223495.pdf) *Applied Mathematics Letters* 14 (2001) 405-411
 
+### Physics
+
+- "This is a well-known problem of a rigid domain wall called after Zhirnov...", https://mathematica.stackexchange.com/a/245841/4999
 ## Teaching
 
 - Trefethen, [*Exploring ODEs*](http://people.maths.ox.ac.uk/trefethen/Exploring.pdf) — MATLAB/Chebfun approach that explores concepts in ODEs assuming one can solve (almost) any ODE with a simple numerical computer command.
@@ -119,5 +122,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzQxMDE2NDJdfQ==
+eyJoaXN0b3J5IjpbMTk1MDQ3OTE1MywtMTk3NDEwMTY0Ml19
 -->
