@@ -89,7 +89,8 @@
 
 ### Physics
 
-- "This is a well-known problem of a rigid domain wall called after Zhirnov...", https://mathematica.stackexchange.com/a/245841/4999
+- "This is a well-known problem of a rigid domain wall called after Zhirnov...", https://mathematica.stackexchange.com/a/245841/4999. "The main point here is that the domain wall solution (that you are, in fact, looking for) corresponds to a separatrix. That is, it is a special trajectory. To select it, one needs to take the corresponding boundary conditions. It brings up the desired simple solution, while other trajectories are described by special functions."
+
 ## Teaching
 
 - Trefethen, [*Exploring ODEs*](http://people.maths.ox.ac.uk/trefethen/Exploring.pdf) — MATLAB/Chebfun approach that explores concepts in ODEs assuming one can solve (almost) any ODE with a simple numerical computer command.
@@ -122,5 +123,5 @@
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MDQ3OTE1M119
+eyJoaXN0b3J5IjpbMjk0NTEzNTkwLDE5NTA0NzkxNTNdfQ==
 -->
