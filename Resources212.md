@@ -143,6 +143,20 @@
 - [Peyré](https://twitter.com/gabrielpeyre/status/1397417210482728960?cn=ZmxleGlibGVfcmVjcw%3D%3D&refsrc=email): "Heavy-ball dynamics (second order ODEs) induce an advection equation (Liouville equation) of a point cloud (in the mean-field limit of an infinite number of particles: a density) over the (position,speed) phase space." [Golse, On the Dynamics of Large Particle Systems in the Mean Field Limit (2013)](https://arxiv.org/pdf/1301.5494v1.pdf)
 - [Quadratic Lyapunov functions of linear autonomous systems](https://stanford.edu/class/ee363/lectures/lq-lyap.pdf)
 
+### TBD
+
+ - https://www.simiode.org/resources/1109
+ - http://professorrdecker.x10host.com/DeckerAlbright.pdf
+ - https://ocw.mit.edu/courses/mathematics/18-305-advanced-analytic-methods-in-science-and-engineering-fall-2004/lecture-notes/eight1.pdf
+ - http://www.cs.toronto.edu/~enright/teaching/CSC2302/IVP.pdf
+ - http://www-users.math.umn.edu/~scheel/teaching/8501-fall18/ode_8501_script.pdf
+ - 
+ - [Continued fractions, Lisa Lorentzen; Haakon Waadeland](http://discovere.emory.edu/primo_library/libweb/action/display.do?tabs=detailsTab&ct=display&fn=search&doc=01EMORY_ALMA21216299450002486&indx=1&recIds=01EMORY_ALMA21216299450002486&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&frbg=&&dscnt=0&scp.scps=scope%3A%28repo%29%2Cscope%3A%2801EMORY_ALMA%29%2CEmory_PrimoThirdNode&tb=t&vid=discovere&mode=Basic&srt=rank&tab=emory_catalog&vl(341573392UI1)=all_items&dum=true&vl(freeText0)=Continued%20Fractions%3A%20Convergence%20theory%20Lisa%20Lorentzen%2C%20Haakon%20Waadeland&dstmp=1614440896786)
+ - [Nonlinear methods in numerical analysis, Annie Cuyt 1956-; L Wuytack (Luc), 1943-](http://discovere.emory.edu/primo_library/libweb/action/display.do?tabs=detailsTab&ct=display&fn=search&doc=01EMORY_ALMA21215079310002486&indx=1&recIds=01EMORY_ALMA21215079310002486&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&frbg=&&dscnt=0&scp.scps=scope%3A%28repo%29%2Cscope%3A%2801EMORY_ALMA%29%2CEmory_PrimoThirdNode&tb=t&vid=discovere&mode=Basic&srt=rank&tab=emory_catalog&vl(341573392UI1)=all_items&dum=true&vl(freeText0)=Nonlinear%20Methods%20in%20Numerical%20Analysis%20A.%20Cuyt%2C%20L.%20Wuytack&dstmp=1614440676357)
+ - https://www.johndcook.com/blog/2017/10/24/differential-equations-and-recurrence-relations/
+ - https://www.johndcook.com/blog/2013/11/12/sensitive-dependence-on-initial-conditions/
+
+
 
 
 > Written with [StackEdit](https://stackedit.io/).
