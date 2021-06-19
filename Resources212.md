@@ -60,7 +60,18 @@
  - https://www.sciencedirect.com/science/article/pii/0021999187900015
  - file:///Users/mike/Downloads/Dahlquist1963_Article_ASpecialStabilityProblemForLin.pdf
  - https://cseweb.ucsd.edu/classes/wi13/cse245-b/papers/Dahlquist.pdf
- -  - https://books.google.com/books?id=NGvrCAAAQBAJ&pg=PA2&lpg=PA2&dq=aiken+1985+dahlquist&source=bl&ots=clDOjN7gQI&sig=ACfU3U3AvCzQKIZijy81ioykvMJIVttr6w&hl=en&sa=X&ved=2ahUKEwihr-_Ipo_uAhUEyFkKHSMZCH0Q6AEwEnoECBIQAg#v=onepage&q=aiken%201985%20dahlquist&f=false
+ - https://books.google.com/books?id=NGvrCAAAQBAJ&pg=PA2&lpg=PA2&dq=aiken+1985+dahlquist&source=bl&ots=clDOjN7gQI&sig=ACfU3U3AvCzQKIZijy81ioykvMJIVttr6w&hl=en&sa=X&ved=2ahUKEwihr-_Ipo_uAhUEyFkKHSMZCH0Q6AEwEnoECBIQAg#v=onepage&q=aiken%201985%20dahlquist&f=false
+ - https://mathematica.stackexchange.com/questions/230407/why-do-isolated-large-values-of-workingprecision-fail-in-ndsolve/230519#230519
+ - https://mathematica.stackexchange.com/questions/116021/stopping-ndsolve-when-encountering-stiffness/231186#231186
+ - https://github.com/scipy/scipy/blob/master/scipy/integrate/odepack/lsoda.f
+ - https://computing.llnl.gov/casc/nsde/pubs/u113855.pdf
+ - https://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack_sub1.f
+ - https://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack_sub2.f
+ - https://mathematica.stackexchange.com/questions/183102/details-of-ndsolve-calling-lsoda
+ - https://mathematica.stackexchange.com/questions/39028/understanding-ndsolvendsz/237989#237989
+ - https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/
+ - https://mathematica.stackexchange.com/questions/9989/how-to-handle-ndsolvendsz-problem-singularity-problem
+ - https://computing.llnl.gov/casc/nsde/pubs/237206.pdf
 
 ### Duffing equation
 
