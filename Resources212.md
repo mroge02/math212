@@ -162,12 +162,8 @@
  - https://www.amazon.com/Mathematics-Experiment-Plausible-Reasoning-Century/dp/1568812116/ref=sr_1_1?dchild=1&keywords=9781568812113&linkCode=qs&qid=1608343814&s=books&sr=1-1
  - https://www.reed.edu/physics/faculty/crandall/papers/Polylog.pdf
  - https://www.amazon.com/Inside-Calculus-Undergraduate-Texts-Mathematics-dp-1475774079/dp/1475774079/ref=mt_other?_encoding=UTF8&me=&qid=1615138003
+ - https://www.ams.org/exam-desk-review-request?type=E&&eisbn=978-1-4704-6282-6&epc=TEXT/62.E&title=Interacting%20with%20Ordinary%20Differential%20Equations&author=Stephen%20H.%20Saperstone%3B%20Max%20A.%20Saperstone
+ - https://bookstore.ams.org/text-62/
 
 
 
-
-
-> Written with [StackEdit](https://stackedit.io/).
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0NTEzNTkwLDE5NTA0NzkxNTNdfQ==
--->
