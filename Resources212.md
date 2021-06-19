@@ -164,6 +164,7 @@
  - https://www.amazon.com/Inside-Calculus-Undergraduate-Texts-Mathematics-dp-1475774079/dp/1475774079/ref=mt_other?_encoding=UTF8&me=&qid=1615138003
  - https://www.ams.org/exam-desk-review-request?type=E&&eisbn=978-1-4704-6282-6&epc=TEXT/62.E&title=Interacting%20with%20Ordinary%20Differential%20Equations&author=Stephen%20H.%20Saperstone%3B%20Max%20A.%20Saperstone
  - https://bookstore.ams.org/text-62/
+ - Numerical Tours, G. Peyré, https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/graphics_5_fluids.ipynb
 
 
 
