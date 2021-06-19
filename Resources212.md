@@ -155,6 +155,14 @@
  - [Nonlinear methods in numerical analysis, Annie Cuyt 1956-; L Wuytack (Luc), 1943-](http://discovere.emory.edu/primo_library/libweb/action/display.do?tabs=detailsTab&ct=display&fn=search&doc=01EMORY_ALMA21215079310002486&indx=1&recIds=01EMORY_ALMA21215079310002486&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&frbg=&&dscnt=0&scp.scps=scope%3A%28repo%29%2Cscope%3A%2801EMORY_ALMA%29%2CEmory_PrimoThirdNode&tb=t&vid=discovere&mode=Basic&srt=rank&tab=emory_catalog&vl(341573392UI1)=all_items&dum=true&vl(freeText0)=Nonlinear%20Methods%20in%20Numerical%20Analysis%20A.%20Cuyt%2C%20L.%20Wuytack&dstmp=1614440676357)
  - https://www.johndcook.com/blog/2017/10/24/differential-equations-and-recurrence-relations/
  - https://www.johndcook.com/blog/2013/11/12/sensitive-dependence-on-initial-conditions/
+ - 
+ - https://www.google.com/search?client=safari&rls=en&q=computing+polylogarithm&ie=UTF-8&oe=UTF-8
+ - https://arxiv.org/pdf/2010.09860.pdf
+ - https://www.cs.kent.ac.uk/pubs/1992/110/content.pdf
+ - https://www.amazon.com/Mathematics-Experiment-Plausible-Reasoning-Century/dp/1568812116/ref=sr_1_1?dchild=1&keywords=9781568812113&linkCode=qs&qid=1608343814&s=books&sr=1-1
+ - https://www.reed.edu/physics/faculty/crandall/papers/Polylog.pdf
+ - https://www.amazon.com/Inside-Calculus-Undergraduate-Texts-Mathematics-dp-1475774079/dp/1475774079/ref=mt_other?_encoding=UTF8&me=&qid=1615138003
+
 
 
 
