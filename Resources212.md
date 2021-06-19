@@ -51,6 +51,17 @@
 - [Gauss-Jackson](https://www.johndcook.com/blog/2020/06/16/nasas-favorite-ode-solver/)
 - Stiffness: [John D Cook blog](https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/), [Cleve's Corner](https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/), [Hindmarsh 1986](https://computing.llnl.gov/casc/nsde/pubs/200849.pdf), [Shampine 1979](https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/1021001), [Shampine 1977](https://dl-acm-org.proxy.library.emory.edu/doi/pdf/10.1145/355719.355722)
 
+### Stiff Equations
+
+ - https://dl-acm-org.proxy.library.emory.edu/doi/pdf/10.1145/355719.355722
+ - https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/1021001
+ - https://hal.archives-ouvertes.fr/hal-01711390/document
+ - https://computing.llnl.gov/casc/nsde/pubs/200849.pdf
+ - https://www.sciencedirect.com/science/article/pii/0021999187900015
+ - file:///Users/mike/Downloads/Dahlquist1963_Article_ASpecialStabilityProblemForLin.pdf
+ - https://cseweb.ucsd.edu/classes/wi13/cse245-b/papers/Dahlquist.pdf
+ -  - https://books.google.com/books?id=NGvrCAAAQBAJ&pg=PA2&lpg=PA2&dq=aiken+1985+dahlquist&source=bl&ots=clDOjN7gQI&sig=ACfU3U3AvCzQKIZijy81ioykvMJIVttr6w&hl=en&sa=X&ved=2ahUKEwihr-_Ipo_uAhUEyFkKHSMZCH0Q6AEwEnoECBIQAg#v=onepage&q=aiken%201985%20dahlquist&f=false
+
 ### Duffing equation
 
  - [The Duffing Equation: Nonlinear Oscillators and their Behaviour](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
