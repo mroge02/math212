@@ -142,6 +142,8 @@
 - [Maximum principle](https://www.johndcook.com/blog/2016/02/10/maximum-principle-and-approximating-boundary-value-problems/)
 - [Peyré](https://twitter.com/gabrielpeyre/status/1397417210482728960?cn=ZmxleGlibGVfcmVjcw%3D%3D&refsrc=email): "Heavy-ball dynamics (second order ODEs) induce an advection equation (Liouville equation) of a point cloud (in the mean-field limit of an infinite number of particles: a density) over the (position,speed) phase space." [Golse, On the Dynamics of Large Particle Systems in the Mean Field Limit (2013)](https://arxiv.org/pdf/1301.5494v1.pdf)
 - [Quadratic Lyapunov functions of linear autonomous systems](https://stanford.edu/class/ee363/lectures/lq-lyap.pdf)
+- [`DSolve` tutorials](https://reference.wolfram.com/language/tutorial/DSolveOverview.html)
+- [`NDSolve` tutorials](https://reference.wolfram.com/language/tutorial/NDSolveOverview.html)
 
 ### TBD
 
