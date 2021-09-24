@@ -144,6 +144,7 @@
 - [Quadratic Lyapunov functions of linear autonomous systems](https://stanford.edu/class/ee363/lectures/lq-lyap.pdf)
 - [`DSolve` tutorials](https://reference.wolfram.com/language/tutorial/DSolveOverview.html)
 - [`NDSolve` tutorials](https://reference.wolfram.com/language/tutorial/NDSolveOverview.html)
+- [Ten Life Lessons](https://www.johndcook.com/blog/2015/07/23/life-lessons-from-differential-equations/) (John D. Cook)
 
 ### TBD
 
