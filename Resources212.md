@@ -45,10 +45,6 @@
 - Yap, [Differential Equations—Not Just a Bag of Tricks!](https://www-jstor-org.proxy.library.emory.edu/stable/10.4169/002557010x479947#metadata_info_tab_contents)
 - [Symmetry-finding packages](https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages)
 
-### Stability, cycles, limit cycles
-
-- [John D. Cook, Nonlinear ODEs with stable limit cycles](https://www.johndcook.com/blog/2021/09/30/stable-limit-cycles/comment-page-1/#comment-1094138)
-
 ### Numerical methods
 
 - 2nd order RK, https://lpsa.swarthmore.edu/NumInt/NumIntSecond.html
@@ -77,6 +73,12 @@
  - https://mathematica.stackexchange.com/questions/9989/how-to-handle-ndsolvendsz-problem-singularity-problem
  - https://computing.llnl.gov/casc/nsde/pubs/237206.pdf
 
+
+### Stability, cycles, limit cycles, bifurcation
+
+- [John D. Cook, Nonlinear ODEs with stable limit cycles](https://www.johndcook.com/blog/2021/09/30/stable-limit-cycles/comment-page-1/#comment-1094138)
+- https://www.johndcook.com/blog/2020/01/22/ode-bifurcation-example/
+
 ### Duffing equation
 
  - [The Duffing Equation: Nonlinear Oscillators and their Behaviour](https://onlinelibrary-wiley-com.proxy.library.emory.edu/doi/pdf/10.1002/9780470977859.ch1)
@@ -89,10 +91,6 @@
 - [Bibliography for the Duffing Equation](http://mathfaculty.fullerton.edu/mathews/n2003/duffing/DuffingBib/Links/DuffingBib_lnk_3.html).
 - ["applications of duffing equation"](https://www.google.com/search?q=applications+of+duffing+equation&client=safari&rls=en&ei=2p8BXY_8Dou4sgWZjJGYBA&start=10&sa=N&ved=0ahUKEwiP0Z_LoOXiAhULnKwKHRlGBEMQ8NMDCJAB&biw=1157&bih=939&dpr=2) (Google search).
 - [Nonlinear Oscillators](http://mafija.fmf.uni-lj.si/seminar/files/2014_2015/seminar_Nonlinear_Oscillators.pdf) (Duffing, van der Pol, Lorenz).
-
-### Bifurcation
-
-- https://www.johndcook.com/blog/2020/01/22/ode-bifurcation-example/
 
 ## Projects and applications
 
