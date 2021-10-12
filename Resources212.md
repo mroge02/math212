@@ -45,6 +45,10 @@
 - Yap, [Differential Equations—Not Just a Bag of Tricks!](https://www-jstor-org.proxy.library.emory.edu/stable/10.4169/002557010x479947#metadata_info_tab_contents)
 - [Symmetry-finding packages](https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages)
 
+### Stability, cycles, limit cycles
+
+- [John D. Cook, Nonlinear ODEs with stable limit cycles](https://www.johndcook.com/blog/2021/09/30/stable-limit-cycles/comment-page-1/#comment-1094138)
+
 ### Numerical methods
 
 - 2nd order RK, https://lpsa.swarthmore.edu/NumInt/NumIntSecond.html
