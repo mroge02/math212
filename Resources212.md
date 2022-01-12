@@ -79,6 +79,7 @@
 
 - [John D. Cook, Nonlinear ODEs with stable limit cycles](https://www.johndcook.com/blog/2021/09/30/stable-limit-cycles/comment-page-1/#comment-1094138)
 - https://www.johndcook.com/blog/2020/01/22/ode-bifurcation-example/
+- Examples of Hopf bifurcation (pp. 18f): https://www2.physics.ox.ac.uk/sites/default/files/profiles/read/lect5-43146.pdf
 
 ### Duffing equation
 
