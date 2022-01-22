@@ -9,6 +9,7 @@
 - [Lindelöf (Picard)](https://github.com/mroge02/math212/blob/master/Lindelof1894-Translation.pdf)
 - Parker (2013) [Who Solved the Bernoulli Equation...](https://www.maa.org/sites/default/files/pdf/upload_library/2/Parker-CMJ-2014.pdf)
 - Differential forms https://math.stackexchange.com/questions/3598325/justifying-the-physicists-method-for-odes-using-differential-forms
+- Euler on exact ODEs and integrating factors: [E269 (English)](https://download.uni-mainz.de/mathematik/Algebraische%20Geometrie/Euler-Kreis%20Mainz/E269RevisedVersion1.pdf), [E269 De integratione aequationum differentialium](https://scholarlycommons.pacific.edu/euler-works/269/)
 
 ### Discontinuous DEs
 
