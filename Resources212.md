@@ -119,6 +119,34 @@
 
 - "This is a well-known problem of a rigid domain wall called after Zhirnov...", https://mathematica.stackexchange.com/a/245841/4999. "The main point here is that the domain wall solution (that you are, in fact, looking for) corresponds to a separatrix. That is, it is a special trajectory. To select it, one needs to take the corresponding boundary conditions. It brings up the desired simple solution, while other trajectories are described by special functions."
 
+### White dwarfs
+
+- [lane-emden equation applications - Google Search](https://www.google.com/search?q=lane-emden+equation+applications&client=safari&rls=en&sxsrf=APq-WBuXRijJll00yG9GcLmmhsPbXY67Pw%3A1644767278485&ei=LigJYq2fHfGZptQPqK-O6AI&oq=Lane-Emden+Equation+applica&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCCEQoAE6BwgjELADECc6BwgAEEcQsAM6BwgAELADEEM6BQgAEIAEOgYIABAWEB5KBAhBGABKBAhGGABQ7wFY40Ng1lNoAXABeAGAAcgCiAGFC5IBBzAuNy4wLjGYAQCgAQHIAQrAAQE&sclient=gws-wiz)
+- [Lane–Emden equation - Wikipedia](https://en.wikipedia.org/wiki/Lane%E2%80%93Emden_equation)
+- [Lane-Emden Equation - Maple Application Center](https://www.maplesoft.com/Applications/Detail.aspx?id=154328)
+- Lane-Emden equation [Shane Larson, Stellar Structure with Maple, 2012](http://sciencejedi.com/professional/classes/astrophysics/lectures/maple_laneEmden.pdf)
+- Lane-Emden equation, p. 127, Ch. 5 Stars and Stellar Structure, in [https://www.lanl.gov/DLDSTP/ay45/ay45c5.pdf](https://www.lanl.gov/DLDSTP/ay45/ay45c5.pdf)
+- DATA [Spitzer Survey of Stellar Structure in Galaxies (S4G)](https://irsa.ipac.caltech.edu/data/SPITZER/S4G/)
+- DATA from Chandrasekhar (1939), p. 6, from Eddingon (1959) p. 8, in [Judy Cohen, AY 101, Physics of Stars / Stellar Structure and Early Evolution, Fall 2015](https://sites.astro.caltech.edu/~jlc/ay101_fall2015/ay101_polytropes_fall2015.pdf)
+- EXERCISES p. 51, Ch. 4, Polytropic Stellar Models, [O.R. Pols, Stellar Structure and Evolution, 2011](https://www.ucolick.org/~woosley/ay112-14/texts/pols11.pdf)
+- [MODULES FOR EXPERIMENTS IN STELLAR ASTROPHYSICS (MESA) - IOPscience](https://iopscience.iop.org/article/10.1088/0067-0049/192/1/3)
+- [Physics 8.282J, MIT, Polytropic Models for Stars, 2006](https://ocw.mit.edu/courses/physics/8-282j-introduction-to-astronomy-spring-2006/assignments/compset2_soln.pdf)
+- [Henny J.G.L.M. Lamers and Emily M. Levesque, Understanding Stellar Evolution, 2017](https://iopscience.iop.org/chapter/978-0-7503-1278-3/bk978-0-7503-1278-3ch11.pdf)
+- Comparison between Polytrope and Real Models, in [Homologous Stellar Models and Polytropes](http://www-astro.physics.ox.ac.uk/~aelg/Krakow/L06.pdf)
+- DATA (Zero Age Main Sequence ZAMS) in [John Lattanzio, Stars Lab 2: Polytropic Stellar Models, 2009](https://users.monash.edu.au/~johnl/astro/ASP3012/Lab2-2009.pdf)
+- [Cowling, Note of the fitting of polytropic models in the Theory of Stellar Structure, 1931](https://watermark.silverchair.com/mnras91-0472.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAtwwggLYBgkqhkiG9w0BBwagggLJMIICxQIBADCCAr4GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMzbWA516Y0ysGkP7cAgEQgIICj2x6DuNyNrKft9OJtj1aZvQmKvvpwkxc2_DUpl9axBVwk8GZekuKH4gXdcVx5fBELpNZzRFjOAP5deN-VF24feYQvfGzeN0gFEcuD2LglyRcmOAGDKmkPEPPzjI6DikIkuJ1CGVy1jwlYlTGYq8usglF3EfgaAG1pjekMxGUiB6Vc5nsZmuWAbtQ6Ucgfd8udfoKiNP3RVlUe0t3iSQaO22_689perzrxVibK8e54e3cWBkwlQcwl4vRq6TOMJe922vLWuh6pw5X3XI8NfyL4axR9Uzkl_ZOKNcO_t00bq6gR8JdZUNPr2R2Vf4nJVJ9uh5q_Eezwr01xAUCduNMymO4PyE_TmK2TcAn0gAY99U8bZQtTzQKMV7FMJxj9y4CG2xhKGlg1PFR50kmlOWVUTEAtgWlyR02vrnzlZXQeE7ak-OQNwba-tEBeskdl3aCwJm3Sh-rmDZjzIYIuDg3rjaRmyjaIJtz6KOF1H1yPLtn6wNI1xsGE6aDdK2u42862HUy4ICujYid4zrgMbEGEfq7aDC26eMpM_RmJkKgPxFXRBu1dxJf4PvimrLwujpbfqiEi6QaR1VgzL200ybphen1lQkapZBzKfwoZKJWuuKAC95hd-luP29A12xcKrwRcGnPd22XDTJqituqNomu2fbRLvQcGrpA8UEpj4BB2rUUiH_v4Cstkc3H1W5zvbiL48Xj3iVslwMMoV9xvY2CYk5PU-ENltaTNHc8T_UAfHDhXM4HOZbs7QscoCKh5cbExd-7gsTYQabWC3rzJtonUhO6IKEbBr9OqyhymaRoimxa46xe2h5ox8RDwMVKQ8MK7o1GG3938LiBYANPNO3iE7dSezkGnwbJLEpCDynw5nY)
+- [An “Impossible” White Dwarf Identified in Kepler Data - AAS Nova](https://aasnova.org/2019/08/07/an-impossible-white-dwarf-identified-in-kepler-data/)
+- [ESA Science & Technology - Shedding light on white dwarfs &ndash; the future of stars like our Sun](https://sci.esa.int/web/gaia/-/61343-shedding-light-on-white-dwarfs-the-future-of-stars-like-our-sun)
+- DATA SOURCE [Astronomical Data Sources](http://tdc-www.harvard.edu/astro.data.html)
+- DATA [White Dwarf Research Corporation - Research - Variable White Dwarf Data Tables](https://whitedwarf.org/tables/)
+- [1995BaltA...4..536B Page 541](https://articles.adsabs.harvard.edu//full/1995BaltA...4..536B/0000541.000.html)
+- DATA [WHITE DWARF DATA TABLES](http://astro.if.ufrgs.br/wdtab.htm)
+- [https://arxiv.org/pdf/2108.10915.pdf](https://arxiv.org/pdf/2108.10915.pdf)
+- DATA [MWDD - Tables and Charts](https://www.montrealwhitedwarfdatabase.org/tables-and-charts.html)
+- DATA [Variable White Dwarf Data Tables - Page 5 of 16 - UNT Digital Library](https://digital.library.unt.edu/ark:/67531/metadc692366/m1/5/)
+
+
+
 ## Teaching
 
 - Trefethen, [*Exploring ODEs*](http://people.maths.ox.ac.uk/trefethen/Exploring.pdf) — MATLAB/Chebfun approach that explores concepts in ODEs assuming one can solve (almost) any ODE with a simple numerical computer command.
