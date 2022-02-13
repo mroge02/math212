@@ -118,6 +118,8 @@
 ### Physics
 
 - "This is a well-known problem of a rigid domain wall called after Zhirnov...", https://mathematica.stackexchange.com/a/245841/4999. "The main point here is that the domain wall solution (that you are, in fact, looking for) corresponds to a separatrix. That is, it is a special trajectory. To select it, one needs to take the corresponding boundary conditions. It brings up the desired simple solution, while other trajectories are described by special functions."
+- https://sites.google.com/view/kspmath
+- [Christopher S. Vaughen, The Kerbal Math & Physics Lab](https://sites.google.com/view/kspmath) (covers Pre-Cal thru Diff Eq). Rocket/flight simulator with data(?) using [Kerbal Space Program](https://www.kerbalspaceprogram.com). 
 
 ### White dwarfs
 
