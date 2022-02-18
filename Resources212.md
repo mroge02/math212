@@ -81,6 +81,7 @@
 - [John D. Cook, Nonlinear ODEs with stable limit cycles](https://www.johndcook.com/blog/2021/09/30/stable-limit-cycles/comment-page-1/#comment-1094138)
 - https://www.johndcook.com/blog/2020/01/22/ode-bifurcation-example/
 - Examples of Hopf bifurcation (pp. 18f): https://www2.physics.ox.ac.uk/sites/default/files/profiles/read/lect5-43146.pdf
+- [Markus and Yamabe, Global stability criteria for differential systems, (1960)](https://projecteuclid.org/journals/osaka-journal-of-mathematics/volume-12/issue-2/Global-stability-criteria-for-differential-systems/ojm/1200689999.full)
 
 ### Duffing equation
 
@@ -147,6 +148,37 @@
 - DATA [MWDD - Tables and Charts](https://www.montrealwhitedwarfdatabase.org/tables-and-charts.html)
 - DATA [Variable White Dwarf Data Tables - Page 5 of 16 - UNT Digital Library](https://digital.library.unt.edu/ark:/67531/metadc692366/m1/5/)
 
+## Models
+
+Modeling projects for each topic (that's the goal, at least).
+
+### Separable
+
+- TBD
+
+### Linear first-order
+
+- **Nonlinear variation of parameter: Bernoulli's equation**
+    + R.C. Yates, Differential Equations, 1952
+- TBD
+
+### Linear second-order
+
+- TBD
+
+### Linear systems
+
+- TBD
+
+### Series solutions
+
+- TBD
+
+### Stiffness
+
+- **Flame**
+    + https://mathematica.stackexchange.com/questions/39028/understanding-ndsolvendsz/237989#237989
+- TBD
 
 
 ## Teaching
