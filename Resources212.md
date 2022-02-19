@@ -244,6 +244,8 @@ Q:
 ### Stiffness
 
 - **Flame**
+    + https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/
+    + https://www.mathworks.com/company/newsletters/articles/stiff-differential-equations.html
     + https://mathematica.stackexchange.com/questions/39028/understanding-ndsolvendsz/237989#237989
 - TBD
 
