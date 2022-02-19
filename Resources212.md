@@ -150,9 +150,25 @@
 
 ## Models
 
-Modeling projects for each topic (that's the goal, at least).
+Modeling projects for each topic (that's the goal, at least). (*Refocus previous section along theses lines?*)
 
 ### Separable
+
+- TBD
+
+### Systems
+
+- Lotka-Volterra
+
+### Integrating factors
+
+- TBD
+
+### First integrals
+
+- TBD
+
+### Homogeneity
 
 - TBD
 
@@ -160,6 +176,16 @@ Modeling projects for each topic (that's the goal, at least).
 
 - **Nonlinear variation of parameter: Bernoulli's equation**
     + R.C. Yates, Differential Equations, 1952
+- **Equidimensional equation**
+    + TBD
+- TBD
+
+### Transformations (diffeomorphisms)
+
+- TBD
+
+### Discontinuities
+
 - TBD
 
 ### Linear second-order
@@ -170,7 +196,19 @@ Modeling projects for each topic (that's the goal, at least).
 
 - TBD
 
-### Series solutions
+### Operator methods
+
+- TBD
+
+### Power/Frobenius series solutions
+
+- TBD
+
+### Fourier series solutions
+
+- TBD
+
+### Laplace transform
 
 - TBD
 
