@@ -152,13 +152,42 @@
 
 Modeling projects for each topic (that's the goal, at least). (*Refocus previous section along theses lines?*)
 
+Q:
+
+- Like Tim Pennington, I think the best modeling projects, at least for motivating further study of the mathematics, combine accessibility and surprise. Should one avoid projects based on domain-specific knowledge, such as from economics, hydrodynamics, biology, quantum mechanics, and so forth, if the phenomenon is familiar and the equations "easy enough"?
+- What is the difference between "applications-first" and "modeling-first"?
+- Does the class have to do experiments and statistics in modeling-first DEs?
+- "[Modeling-first] motivates and drives the mathematics" (Bryan, *Differential Equations*): What is "the mathematics" in each case? Is it more than solving IVPs and BVPs? (In that case, it does seem numerical methods deflate any enthusiasm for studying symbolic ones.) Some of the classical and modern mathematics: existence and uniqueness, implications of uniqueness, rectifiability and exactness, scaling the vector field to be rectifiable (integrating factors), bases and independence for the solution space of a linear system (Wronskian), equilibria and stability, oscillatory solutions and limit cycles, monodromy, discontinuous vector fields, invariants, existence of analytic solutions (i.e. convergent power series), symmetry,....
+- What are the learning goals in each chapter of Kurt Bryan's book?
+- 
+
+### Existence and uniqueness
+
+- TBD
+
+### Picard iteration
+
+- TBD
+
+### Exact equations
+
+- TBD
+
 ### Separable
+
+- TBD
+
+### Homogeneous
 
 - TBD
 
 ### Systems
 
 - Lotka-Volterra
+
+### Systems: Products
+
+- Lotka-Volterra (?)
 
 ### Integrating factors
 
