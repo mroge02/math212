@@ -17,6 +17,7 @@
 
 ### Asymptotic series
 - Boyd, [The Devil’s Invention: Asymptotic, Superasymptotic and Hyperasymptotic Series](http://www-personal.umich.edu/~jpboyd/boydactaapplicreview.pdf), [SpringerLink](https://link.springer.com/article/10.1023/A:1006145903624) (1999)
+- [Mark A. Lau, AN INTERACTIVE INTRODUCTION TO REGULAR PERTURBATION FOR ORDINARY DIFFERENTIAL EQUATIONS](https://www.simiode.org/resources/6091/download/1-060-Text-S-RegularPerturbation-StudentVersion.pdf) (SIMIODE)
 
 ### Linear
 
