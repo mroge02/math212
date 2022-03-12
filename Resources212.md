@@ -116,6 +116,7 @@
 - Brøns *et al.*,[Circle Maps and the Devil's Staircase in a Periodically Perturbed Oregonator](https://www.researchgate.net/publication/260456611_Circle_Maps_and_the_Devil%27s_Staircase_in_a_Periodically_Perturbed_Oregonator), [International Journal of Bifurcation and Chaos](https://www.researchgate.net/publication/journal/0218-1274_International_Journal_of_Bifurcation_and_Chaos)  7(11) (1997) 2621-2628
 - Esen *et al.*, [On integrals, Hamiltonian and metriplectic formulations of polynomial systems in 3D](https://doi.org/10.2298/TAM161118001E). Theoretical and Applied Mechanics 2017 Volume 44, Issue 1, Pages: 15-34 ([PDF](http://www.doiserbia.nb.rs/img/doi/1450-5584/2017/1450-55841700001E.pdf))
 - H. Qian and J.D. Murray, [A Simple Method of Parameter Space Determination for Diffusion-Driven Instability with Three Species](https://core.ac.uk/download/pdf/82223495.pdf) *Applied Mathematics Letters* 14 (2001) 405-411
+- A. T. Winfree, The prehistory of the Belousov-Zhabotinsky oscillator, Journal of Chemical Education, **61**(8), 661, 1984 https://pubs.acs.org/doi/pdf/10.1021/ed061p661, https://doi.org/10.1021/ed061p661
 
 ### Physics
 
