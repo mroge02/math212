@@ -150,6 +150,17 @@
 - DATA [MWDD - Tables and Charts](https://www.montrealwhitedwarfdatabase.org/tables-and-charts.html)
 - DATA [Variable White Dwarf Data Tables - Page 5 of 16 - UNT Digital Library](https://digital.library.unt.edu/ark:/67531/metadc692366/m1/5/)
 
+### Vibrational modes
+
+- Vibrational Modes of Methane, https://www.chem.purdue.edu/jmol/vibs/ch4.html
+- Antropogenic and Natural Radiative Forcing (greenhouse gases), https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter08_FINAL.pdf
+- Characteristic Vibrations of CH4, http://www2.ess.ucla.edu/~schauble/MoleculeHTML/CH4_html/CH4_page.html
+- Methane, https://webbook.nist.gov/cgi/cbook.cgi?ID=C74828&Units=SI&Type=IR-SPEC&Index=1#IR-SPEC
+- List of character tables for chemically important 3D point groups, https://en.wikipedia.org/wiki/List_of_character_tables_for_chemically_important_3D_point_groups#Polyhedral_symmetries
+- bond - Why are some molecules unable to absorb infrared radiation? - Chemistry Stack Exchange, https://chemistry.stackexchange.com/questions/73565/why-are-some-molecules-unable-to-absorb-infrared-radiation/73589#73589
+
+
+
 ## Models
 
 Modeling projects for each topic (that's the goal, at least). (*Refocus previous section along theses lines?*)
