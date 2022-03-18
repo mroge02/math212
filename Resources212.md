@@ -125,7 +125,6 @@
 - Chemistry and Mathematics of the Belousov–Zhabotinsky Reaction in a School Laboratory | Journal of Chemical Education, https://pubs.acs.org/doi/abs/10.1021/acs.jchemed.9b00906
 - The Belousov-Zhabotinsky Reaction, https://mse.redwoods.edu/darnold/math55/DEProj/Sp98/Gabe/bzreact.htm
 - https://twitter.com/search?q=Belousov-Zhabotinsky&src=typed_query, https://twitter.com/search?q=Belousov-Zhabotinsky&src=typed_query
-- Chemistry and Mathematics of the Belousov–Zhabotinsky Reaction in a School Laboratory | Journal of Chemical Education, https://pubs.acs.org/doi/pdf/10.1021/acs.jchemed.9b00906
 - Simba et al, Chimera and Phase Cluster States in Populations of coupled chemical oscillators, https://static-content.springer.com/esm/art%3A10.1038%2Fnphys2371/MediaObjects/41567_2012_BFnphys2371_MOESM2_ESM.pdf
 - MATHEMATICA TUTORIAL, Part 2.3: Miscellany, https://www.cfm.brown.edu/people/dobrush/am34/Mathematica/ch3/miscellany.html
 - Belousov-Zhabotinsky reaction - Scholarpedia, http://www.scholarpedia.org/article/Belousov-Zhabotinsky_reaction
