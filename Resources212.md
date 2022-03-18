@@ -117,6 +117,20 @@
 - Esen *et al.*, [On integrals, Hamiltonian and metriplectic formulations of polynomial systems in 3D](https://doi.org/10.2298/TAM161118001E). Theoretical and Applied Mechanics 2017 Volume 44, Issue 1, Pages: 15-34 ([PDF](http://www.doiserbia.nb.rs/img/doi/1450-5584/2017/1450-55841700001E.pdf))
 - H. Qian and J.D. Murray, [A Simple Method of Parameter Space Determination for Diffusion-Driven Instability with Three Species](https://core.ac.uk/download/pdf/82223495.pdf) *Applied Mathematics Letters* 14 (2001) 405-411
 - A. T. Winfree, The prehistory of the Belousov-Zhabotinsky oscillator, Journal of Chemical Education, **61**(8), 661, 1984 https://pubs.acs.org/doi/pdf/10.1021/ed061p661, https://doi.org/10.1021/ed061p661
+- Belousov–Zhabotinsky reaction - Wikipedia, https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction
+- Belousov-Zhabotinsky type reactions: the non-linear behavior of chemical systems | SpringerLink, https://link.springer.com/article/10.1007/s10910-021-01223-9
+- Vanag_WavesandPatternsinRDsys_Physics-Uspekhi-2004.pdf, file:///Users/mike/Downloads/Vanag_WavesandPatternsinRDsys_Physics-Uspekhi-2004.pdf
+- Processes | Free Full-Text | Study on the Formation of Complex Chemical Waveforms by Different Computational Methods | HTML, https://www.mdpi.com/2227-9717/8/4/393/htm
+- https://hal.archives-ouvertes.fr/jpa-00248525/document, https://hal.archives-ouvertes.fr/jpa-00248525/document
+- Chemistry and Mathematics of the Belousov–Zhabotinsky Reaction in a School Laboratory | Journal of Chemical Education, https://pubs.acs.org/doi/abs/10.1021/acs.jchemed.9b00906
+- The Belousov-Zhabotinsky Reaction, https://mse.redwoods.edu/darnold/math55/DEProj/Sp98/Gabe/bzreact.htm
+- https://twitter.com/search?q=Belousov-Zhabotinsky&src=typed_query, https://twitter.com/search?q=Belousov-Zhabotinsky&src=typed_query
+- Chemistry and Mathematics of the Belousov–Zhabotinsky Reaction in a School Laboratory | Journal of Chemical Education, https://pubs.acs.org/doi/pdf/10.1021/acs.jchemed.9b00906
+- https://static-content.springer.com/esm/art%3A10.1038%2Fnphys2371/MediaObjects/41567_2012_BFnphys2371_MOESM2_ESM.pdf, https://static-content.springer.com/esm/art%3A10.1038%2Fnphys2371/MediaObjects/41567_2012_BFnphys2371_MOESM2_ESM.pdf
+- MATHEMATICA TUTORIAL, Part 2.3: Miscellany, https://www.cfm.brown.edu/people/dobrush/am34/Mathematica/ch3/miscellany.html
+- Belousov-Zhabotinsky reaction - Scholarpedia, http://www.scholarpedia.org/article/Belousov-Zhabotinsky_reaction
+
+
 
 ### Physics
 
