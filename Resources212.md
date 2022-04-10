@@ -24,6 +24,7 @@
 
 - Venkataramana, [Differential Equations and Monodromy](https://arxiv.org/pdf/1911.02840.pdf) (2019)
 - Fasi and Higham, [...the Matrix Exponential](https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/18M1228876) (2019).
+- Robert S. Maier, [192 solutions of the Heun equation](https://www.ams.org/journals/mcom/2007-76-258/S0025-5718-06-01939-9/S0025-5718-06-01939-9.pdf)
  
 ### First integrals and invariants
 
