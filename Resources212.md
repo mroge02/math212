@@ -237,6 +237,7 @@ Q:
     + R.C. Yates, Differential Equations, 1952
 - **Equidimensional equation**
     + TBD
+- Falling cat, fish & pollution, growth of fish: https://jmahaffy.sdsu.edu/courses/f15/math337/beamer/linear.pdf
 - TBD
 
 ### Transformations (diffeomorphisms)
