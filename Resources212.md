@@ -176,6 +176,7 @@
 
 
 
+
 ## Models
 
 Modeling projects for each topic (that's the goal, at least). (*Refocus previous section along theses lines?*)
@@ -284,6 +285,12 @@ Q:
     + https://www.mathworks.com/company/newsletters/articles/stiff-differential-equations.html
     + https://mathematica.stackexchange.com/questions/39028/understanding-ndsolvendsz/237989#237989
 - TBD
+
+### Other
+
+- Rogue waves (nonlinear Schrödinger equation) https://www.pnas.org/doi/10.1073/pnas.1710670115
+
+
 
 
 ## Teaching
