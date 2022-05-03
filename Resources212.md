@@ -288,7 +288,7 @@ Q:
 
 ### Other
 
-- Rogue waves (nonlinear Schrödinger equation) https://www.pnas.org/doi/10.1073/pnas.1710670115
+- Rogue waves (nonlinear Schrödinger equation) https://www.pnas.org/doi/10.1073/pnas.1710670115, https://www.quantamagazine.org/the-grand-unified-theory-of-rogue-waves-20200205/
 
 
 
