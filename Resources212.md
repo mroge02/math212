@@ -350,4 +350,16 @@ Q:
  - Numerical Tours, G. Peyré, https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/graphics_5_fluids.ipynb
 
 
+### SIMIODE Expo 2022
+
+- perruchet gallego college math journal - Google Search https://www.google.com/search?client=safari&rls=en&q=perruchet+gallego+college+math+journal&ie=UTF-8&oe=UTF-8
+- tim pennings elvis lives college math journal - Google Search https://www.google.com/search?client=safari&rls=en&q=tim+pennings+elvis+lives+college+math+journal&ie=UTF-8&oe=UTF-8
+- tim pennings dogs bifurcation polya award - Google Search https://www.google.com/search?q=tim+pennings+dogs+bifurcation+polya+award&client=safari&rls=en&sxsrf=APq-WBtjEw_VAFaa-uFBpHEqiGcjhpi27g%3A1644784154218&ei=GmoJYuL-DJqo0PEP4e2i2AU&ved=0ahUKEwji8_m5wv31AhUaFDQIHeG2CFsQ4dUDCA0&uact=5&oq=tim+pennings+dogs+bifurcation+polya+award&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQ_gdYng1g3xVoAXAAeACAAagBiAH9BZIBAzAuNZgBAKABAcABAQ&sclient=gws-wiz
+- Brian Winkel getting to the mall - Google Search https://www.google.com/search?client=safari&rls=en&q=Brian+Winkel+getting+to+the+mall&ie=UTF-8&oe=UTF-8
+- SIMIODE - Starter Kit https://www.simiode.org/starterkit
+- Sasha Townsend - Calculus Resources, Higher Education https://sashatownsend.com/
+- Sasha Townsend - Differential Equations https://sashatownsend.com/differential-equations
+- Sasha Townsend - ELEMENTARY DIFFERENTIAL EQUATIONS - SBG Course Standards & Grading Rubric https://img1.wsimg.com/blobby/go/c4ed2c5e-bb0a-4f7c-a736-09919b16ba2e/downloads/DE%20Standards%20Rubric%20Fall%202020.pdf?ver=1644440651816
+- The Kerbal Math & Physics Lab https://sites.google.com/view/kspmath
+- Kerbal Space Program 2 – Kerbal Space Program https://www.kerbalspaceprogram.com/game/kerbal-space-program-2/
 
