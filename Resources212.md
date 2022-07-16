@@ -131,6 +131,8 @@
 - MATHEMATICA TUTORIAL, Part 2.3: Miscellany, https://www.cfm.brown.edu/people/dobrush/am34/Mathematica/ch3/miscellany.html
 - Belousov-Zhabotinsky reaction - Scholarpedia, http://www.scholarpedia.org/article/Belousov-Zhabotinsky_reaction
 
+-
+
 - Cabral *et al.*, Metastable Oscillatory Modes emerge from synchronization in the Brain Spacetime Connectome, https://doi.org/10.1101/2022.01.06.475196, [bioRχiv](https://www.biorxiv.org/content/10.1101/2022.01.06.475196v3) [(pdf)](https://www.biorxiv.org/content/10.1101/2022.01.06.475196v3.full.pdf) -- Stuart-Landau model pp. 18ff. MATLAB code:  https://github.com/fcast7/Hopf_Delay_Toolbox
 
 ### Physics
