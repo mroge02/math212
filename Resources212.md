@@ -110,7 +110,7 @@
 - [Chen *et al.*, Neural Ordinary Differential Equations (2019)](https://arxiv.org/pdf/1806.07366.pdf)
 - [Ryan Hynd, Hamilton-Jacobi equation (Oct 2021)](https://www.ams.org/journals/notices/202109/rnoti-p1457.pdf)
 
-### Oregonator, BZ, OCRs
+### Oregonator, BZ, OCRs; Oscillatory systems
 
 - [Oscillating chemical reactions (OCRs)](https://pubs.acs.org/doi/pdf/10.1021/ed300227w), *J. Chem. Educ* 2013, 90, 82−89.
 - [Lyapunov exponents and the Belousov-Zhabotinsky oscillator](http://www.scielo.org.za/scielo.php?script=sci_arttext&pid=S0379-43502017000100011),*S.Afr.j.chem.* (Online) vol.70 Durban 2017;  http://dx.doi.org/10.17159/0379-4350/2017/v70a11
@@ -131,7 +131,7 @@
 - MATHEMATICA TUTORIAL, Part 2.3: Miscellany, https://www.cfm.brown.edu/people/dobrush/am34/Mathematica/ch3/miscellany.html
 - Belousov-Zhabotinsky reaction - Scholarpedia, http://www.scholarpedia.org/article/Belousov-Zhabotinsky_reaction
 
-
+- Cabral *et al.*, Metastable Oscillatory Modes emerge from synchronization in the Brain Spacetime Connectome, https://doi.org/10.1101/2022.01.06.475196, [bioRχiv](https://www.biorxiv.org/content/10.1101/2022.01.06.475196v3) [(pdf)](https://www.biorxiv.org/content/10.1101/2022.01.06.475196v3.full.pdf) -- Stuart-Landau model pp. 18ff. MATLAB code:  https://github.com/fcast7/Hopf_Delay_Toolbox
 
 ### Physics
 
