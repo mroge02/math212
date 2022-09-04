@@ -192,6 +192,7 @@ Q:
 - What are the learning goals in each chapter of Kurt Bryan's book?
 - Re Bryan, modeling Usain Bolt's 2008 race: Strogatz, *Quanta*, https://www.quantamagazine.org/infinite-powers-usain-bolt-and-the-art-of-calculus-20190403/
 - Rob Knapp, https://www.wolfram.com/broadcast/video.php?c=89&p=2&v=83, good examples start ~14:00
+- Population growth data (incl. predator-prey, competing populations): https://rdrr.io/github/adamtclark/gauseR/
 
 
 ### Existence and uniqueness
