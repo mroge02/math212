@@ -55,6 +55,7 @@
 - [Gauss-Jackson](https://www.johndcook.com/blog/2020/06/16/nasas-favorite-ode-solver/)
 - Stiffness: [John D Cook blog](https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/), [Cleve's Corner](https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/), [Hindmarsh 1986](https://computing.llnl.gov/casc/nsde/pubs/200849.pdf), [Shampine 1979](https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/1021001), [Shampine 1977](https://dl-acm-org.proxy.library.emory.edu/doi/pdf/10.1145/355719.355722)
 - [Test Set for IVP Solvers](https://archimede.dm.uniba.it/~testset/testsetivpsolvers/)
+- J. Butcher, construction of RK methods, https://www.math.auckland.ac.nz/~butcher/CONFERENCES/JAPAN/KYUSHU/kyushu-slides.pdf
 
 ### Stiff Equations
 
