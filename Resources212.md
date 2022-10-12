@@ -306,6 +306,7 @@ Q:
 - [Decker and Albright (textbook)](http://professorrdecker.x10host.com/DeckerAlbright.pdf)
 - [Irregular singular points](https://ocw.mit.edu/courses/mathematics/18-305-advanced-analytic-methods-in-science-and-engineering-fall-2004/lecture-notes/eight1.pdf)
 - [The Numerical Solution of ODEs (course notes)](http://www.cs.toronto.edu/~enright/teaching/CSC2302/IVP.pdf)
+- Steve Brunton, U. Wash., Engineering Math: Differential Equations and Dynamical Systems (course), https://www.youtube.com/watch?v=9fQkLQZe3u8&list=PLMrJAkhIeNNTYaOnVI3QpH7jgULnAmvPA&index=5
 
 ## Other lists of resources
 
