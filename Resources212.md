@@ -177,7 +177,9 @@
 - List of character tables for chemically important 3D point groups, https://en.wikipedia.org/wiki/List_of_character_tables_for_chemically_important_3D_point_groups#Polyhedral_symmetries
 - bond - Why are some molecules unable to absorb infrared radiation? - Chemistry Stack Exchange, https://chemistry.stackexchange.com/questions/73565/why-are-some-molecules-unable-to-absorb-infrared-radiation/73589#73589
 
+### History
 
+- FEM, 1941- https://link.springer.com/article/10.1007/s11831-022-09740-9 (2022)
 
 
 ## Models
