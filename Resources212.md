@@ -48,6 +48,8 @@
 - Yap, [Visualizing and Utilizing Symmetries of Differential Equations](https://www.maa.org/press/periodicals/visualizing-and-utilizing-symmetries-of-differential-equations); [Desmos demo](https://www.desmos.com/calculator/56sugpkqol)
 - Yap, [Differential Equations—Not Just a Bag of Tricks!](https://www-jstor-org.proxy.library.emory.edu/stable/10.4169/002557010x479947#metadata_info_tab_contents)
 - [Symmetry-finding packages](https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages)
+- Sofroniu and Spaletta, Hybrid solvers for composition and splitting methods, *Journal of Computational and Applied Mathematics* **185** (2006) 278 – 291. [PDF](https://reader.elsevier.com/reader/sd/pii/S0377042705001159?token=A44B0AC9C2230D2758F5BDF740425E5D632E81A0BE1C3888C947D3926598F28DFEF4CA9572E25845D2AC73E78576AD20&originRegion=us-east-1&originCreation=20221124152858). (For Mathematica.)
+
 
 ### Numerical methods
 
@@ -56,6 +58,8 @@
 - Stiffness: [John D Cook blog](https://www.johndcook.com/blog/2020/02/02/stiff-differential-equations/), [Cleve's Corner](https://blogs.mathworks.com/cleve/2014/06/09/ordinary-differential-equations-stiffness/), [Hindmarsh 1986](https://computing.llnl.gov/casc/nsde/pubs/200849.pdf), [Shampine 1979](https://epubs-siam-org.proxy.library.emory.edu/doi/pdf/10.1137/1021001), [Shampine 1977](https://dl-acm-org.proxy.library.emory.edu/doi/pdf/10.1145/355719.355722)
 - [Test Set for IVP Solvers](https://archimede.dm.uniba.it/~testset/testsetivpsolvers/)
 - J. Butcher, construction of RK methods, https://www.math.auckland.ac.nz/~butcher/CONFERENCES/JAPAN/KYUSHU/kyushu-slides.pdf
+- Enright, Verifying approximate solutions to differential equations, *Journal of Computational and Applied Mathematics* **185** (2006) 203 – 211. [PDF](https://reader.elsevier.com/reader/sd/pii/S037704270500110X?token=ED7F23AC0600593EECFD3FD6372E052A4A79D631D48BA611F0480A1A624D4ACF745FBACD666CBFFDE3781D9219E3F153&originRegion=us-east-1&originCreation=20221124153345)
+
 
 ### Stiff Equations
 
