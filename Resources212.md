@@ -355,6 +355,7 @@ Q:
  - https://www.ams.org/exam-desk-review-request?type=E&&eisbn=978-1-4704-6282-6&epc=TEXT/62.E&title=Interacting%20with%20Ordinary%20Differential%20Equations&author=Stephen%20H.%20Saperstone%3B%20Max%20A.%20Saperstone
  - https://bookstore.ams.org/text-62/
  - Numerical Tours, G. Peyré, https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/graphics_5_fluids.ipynb
+ - Karman (vortex street), https://gdz.sub.uni-goettingen.de/id/PPN252457811_1911?tify=%7B%22pages%22%3A%5B536%5D%2C%22pan%22%3A%7B%22x%22%3A0.53%2C%22y%22%3A0.805%7D%2C%22view%22%3A%22info%22%2C%22zoom%22%3A0.593%7D
 
 
 ### SIMIODE Expo 2022
