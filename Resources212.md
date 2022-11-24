@@ -135,9 +135,7 @@
 - Simba et al, Chimera and Phase Cluster States in Populations of coupled chemical oscillators, https://static-content.springer.com/esm/art%3A10.1038%2Fnphys2371/MediaObjects/41567_2012_BFnphys2371_MOESM2_ESM.pdf
 - MATHEMATICA TUTORIAL, Part 2.3: Miscellany, https://www.cfm.brown.edu/people/dobrush/am34/Mathematica/ch3/miscellany.html
 - Belousov-Zhabotinsky reaction - Scholarpedia, http://www.scholarpedia.org/article/Belousov-Zhabotinsky_reaction
-
 -
-
 - Cabral *et al.*, Metastable Oscillatory Modes emerge from synchronization in the Brain Spacetime Connectome, https://doi.org/10.1101/2022.01.06.475196, [bioRχiv](https://www.biorxiv.org/content/10.1101/2022.01.06.475196v3) [(pdf)](https://www.biorxiv.org/content/10.1101/2022.01.06.475196v3.full.pdf) -- Stuart-Landau model pp. 18ff. MATLAB code:  https://github.com/fcast7/Hopf_Delay_Toolbox
 
 ### Physics
@@ -360,6 +358,7 @@ Q:
  - https://bookstore.ams.org/text-62/
  - Numerical Tours, G. Peyré, https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/graphics_5_fluids.ipynb
  - Karman (vortex street), https://gdz.sub.uni-goettingen.de/id/PPN252457811_1911?tify=%7B%22pages%22%3A%5B536%5D%2C%22pan%22%3A%7B%22x%22%3A0.53%2C%22y%22%3A0.805%7D%2C%22view%22%3A%22info%22%2C%22zoom%22%3A0.593%7D
+ - Hodgkin-Huxley model of action potentials in neurons, https://en.wikipedia.org/wiki/Hodgkin–Huxley_model
 
 
 ### SIMIODE Expo 2022
