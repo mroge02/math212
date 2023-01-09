@@ -385,6 +385,7 @@ https://asa-scitation-org.proxy.library.emory.edu/doi/pdf/10.1121/1.1805143
  - Numerical Tours, G. Peyré, https://nbviewer.jupyter.org/github/gpeyre/numerical-tours/blob/master/python/graphics_5_fluids.ipynb
  - Karman (vortex street), https://gdz.sub.uni-goettingen.de/id/PPN252457811_1911?tify=%7B%22pages%22%3A%5B536%5D%2C%22pan%22%3A%7B%22x%22%3A0.53%2C%22y%22%3A0.805%7D%2C%22view%22%3A%22info%22%2C%22zoom%22%3A0.593%7D
  - Hodgkin-Huxley model of action potentials in neurons, https://en.wikipedia.org/wiki/Hodgkin–Huxley_model
+ - [Wolfram notebook archive (differential equations)](https://notebookarchive.org/search?q=Differential%20equations)
 
 
 ### SIMIODE Expo 2022
