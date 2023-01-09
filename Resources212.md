@@ -300,6 +300,25 @@ Q:
     + https://mathematica.stackexchange.com/questions/39028/understanding-ndsolvendsz/237989#237989
 - TBD
 
+### Airy functions/equation
+
+- airy function caustics experimental wave ordinary differential equation - Google Search
+https://www.google.com/search?q=airy+function+caustics+experimental+wave+ordinary+differential+equation&client=safari&rls=en&biw=1157&bih=921&sxsrf=APq-WBuJhTnZHPFHoiL20Q1rU4Q0ii8dzA%3A1645031369308&ei=yS8NYoakEuuhkPIPwry1wAs&ved=0ahUKEwjGrKWz24T2AhXrEEQIHUJeDbgQ4dUDCA0&uact=5&oq=airy+function+caustics+experimental+wave+ordinary+differential+equation&gs_lcp=Cgdnd3Mtd2l6EAM6BwgjELADECc6BAgjECdKBAhBGAFKBAhGGABQ8wdYyA5g9RdoAXAAeACAAeoBiAHyBpIBBTAuMy4ymAEAoAEByAEBwAEB&sclient=gws-wiz
+- Percell (thesis),  The Effect of Caustics in Acoustic Inverse Scattering Experiments, https://scholarship.rice.edu/bitstream/handle/1911/101655/TR89-03.pdf?sequence=1
+https://scholarship.rice.edu/bitstream/handle/1911/101655/TR89-03.pdf?sequence=1
+- Airy Function - an overview | ScienceDirect Topics
+https://www.sciencedirect.com/topics/physics-and-astronomy/airy-function
+- Kirkby et al., The Effect of Caustics in Acoustic Inverse Scattering Experiments, https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.4.013105
+https://journals.aps.org/prresearch/pdf/10.1103/PhysRevResearch.4.013105
+- Dzikowicz, Singly focused backscattering from small targets in an Airy caustic formed by a curved reflecting surface. https://asa-scitation-org.proxy.library.emory.edu/doi/pdf/10.1121/1.1805143
+https://asa-scitation-org.proxy.library.emory.edu/doi/pdf/10.1121/1.1805143
+
+
+
+### Heat/Wave PDEs
+
+- Brody et al., A simple optical probe of transient heat conduction, https://aapt-scitation-org.proxy.library.emory.edu/doi/10.1119/1.3299282
+
 ### Other
 
 - Rogue waves (nonlinear Schrödinger equation) https://www.pnas.org/doi/10.1073/pnas.1710670115, https://www.quantamagazine.org/the-grand-unified-theory-of-rogue-waves-20200205/
