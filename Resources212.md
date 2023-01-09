@@ -105,6 +105,11 @@
 - ["applications of duffing equation"](https://www.google.com/search?q=applications+of+duffing+equation&client=safari&rls=en&ei=2p8BXY_8Dou4sgWZjJGYBA&start=10&sa=N&ved=0ahUKEwiP0Z_LoOXiAhULnKwKHRlGBEMQ8NMDCJAB&biw=1157&bih=939&dpr=2) (Google search).
 - [Nonlinear Oscillators](http://mafija.fmf.uni-lj.si/seminar/files/2014_2015/seminar_Nonlinear_Oscillators.pdf) (Duffing, van der Pol, Lorenz).
 
+### Historical
+
+- Hadamard, Four Lectures, https://gutenberg.org/files/29788/29788-pdf.pdf
+- Arnold, Sur la géométrie différentielle des groupes de Lie de dimension infinie et ses applications à l’hydrodynamique des fluides parfaits, http://archive.numdam.org/article/AIF_1966__16_1_319_0.pdf
+
 ## Projects and applications
 
 -  Internet Differential Equations Activities, [IDEA Projects](http://www.idea.wsu.edu/projects.php)  (WSU, NSF, ca. 1997) — Mainly short projects of varying sophistication.
