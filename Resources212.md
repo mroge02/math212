@@ -110,6 +110,12 @@
 
 - Hadamard, Four Lectures, https://gutenberg.org/files/29788/29788-pdf.pdf
 - Arnold, Sur la géométrie différentielle des groupes de Lie de dimension infinie et ses applications à l’hydrodynamique des fluides parfaits, http://archive.numdam.org/article/AIF_1966__16_1_319_0.pdf
+- "De integratione aequationum differentialium" by Leonhard Euler
+https://scholarlycommons.pacific.edu/euler-works/269/
+- Euler-Kreis Mainz / Euler Übersetzungen | Algebraische Geometrie, Topologie und Zahlentheorie
+https://www.agtz.mathematik.uni-mainz.de/algebraische-geometrie/van-straten/euler-kreis-mainz/
+
+
 
 ## Projects and applications
 
