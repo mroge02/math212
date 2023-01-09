@@ -91,6 +91,7 @@
 - https://www.johndcook.com/blog/2020/01/22/ode-bifurcation-example/
 - Examples of Hopf bifurcation (pp. 18f): https://www2.physics.ox.ac.uk/sites/default/files/profiles/read/lect5-43146.pdf
 - [Markus and Yamabe, Global stability criteria for differential systems, (1960)](https://projecteuclid.org/journals/osaka-journal-of-mathematics/volume-12/issue-2/Global-stability-criteria-for-differential-systems/ojm/1200689999.full)
+- Boulbitch et al., Transformational process zone emerging at the tip of a propagating crack, https://arxiv.org/pdf/1507.03128.pdf
 
 ### Duffing equation
 
