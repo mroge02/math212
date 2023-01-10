@@ -49,6 +49,7 @@
 - Yap, [Differential Equations—Not Just a Bag of Tricks!](https://www-jstor-org.proxy.library.emory.edu/stable/10.4169/002557010x479947#metadata_info_tab_contents)
 - [Symmetry-finding packages](https://mathematica.stackexchange.com/questions/20438/symmetry-finding-packages)
 - Sofroniu and Spaletta, Hybrid solvers for composition and splitting methods, *Journal of Computational and Applied Mathematics* **185** (2006) 278 – 291. [PDF](https://reader.elsevier.com/reader/sd/pii/S0377042705001159?token=A44B0AC9C2230D2758F5BDF740425E5D632E81A0BE1C3888C947D3926598F28DFEF4CA9572E25845D2AC73E78576AD20&originRegion=us-east-1&originCreation=20221124152858). (For Mathematica.)
+- Terrence Tao, Noether's theorem and Conservation Laws, https://terrytao.wordpress.com/2014/03/02/noethers-theorem-and-the-conservation-laws-for-the-euler-equations/
 
 
 ### Numerical methods
