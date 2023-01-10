@@ -116,6 +116,11 @@ https://scholarlycommons.pacific.edu/euler-works/269/
 - Euler-Kreis Mainz / Euler Übersetzungen | Algebraische Geometrie, Topologie und Zahlentheorie
 https://www.agtz.mathematik.uni-mainz.de/algebraische-geometrie/van-straten/euler-kreis-mainz/
 
+### Finite fields
+
+- Google search, "differential equations" over "finite fields",https://www.google.com/search?q=%22differential+equations%22+over+%22finite+fields%22&client=safari&rls=en&sxsrf=ALiCzsZjLehfKycucu4jfiMmDFzPWKL7Bg:1665802885323&ei=hSJKY_mgE6KeqtsPxOebwAI&start=80&sa=N&ved=2ahUKEwi59_qpn-H6AhUij2oFHcTzBig4RhDw0wN6BAgEEBc&biw=1157&bih=944&dpr=2
+- M Fried, Applications of curves over finite fields, https://www.math.uci.edu/~mfried/booklist-vol/curvesFFields.pdf
+- H Neiderreiter, Factoring polynomials over finite fields using differential equations and normal bases, https://www.ams.org/journals/mcom/1994-62-206/S0025-5718-1994-1216262-2/S0025-5718-1994-1216262-2.pdf
 
 
 ## Projects and applications
