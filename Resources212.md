@@ -197,6 +197,7 @@ https://www.agtz.mathematik.uni-mainz.de/algebraische-geometrie/van-straten/eule
 - Methane, https://webbook.nist.gov/cgi/cbook.cgi?ID=C74828&Units=SI&Type=IR-SPEC&Index=1#IR-SPEC
 - List of character tables for chemically important 3D point groups, https://en.wikipedia.org/wiki/List_of_character_tables_for_chemically_important_3D_point_groups#Polyhedral_symmetries
 - bond - Why are some molecules unable to absorb infrared radiation? - Chemistry Stack Exchange, https://chemistry.stackexchange.com/questions/73565/why-are-some-molecules-unable-to-absorb-infrared-radiation/73589#73589
+- Aircraft flight dynamic - https://en.wikipedia.org/wiki/Aircraft_flight_dynamics
 
 ### History
 
