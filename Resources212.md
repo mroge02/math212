@@ -1,5 +1,10 @@
 # Resources for Differential Equations Courses
 
+## Intro
+
+- Video on butterfly effect, https://www.youtube.com/watch?v=fDek6cYijxI (includes phase space)
+- Lorenz attractor: http://www.malinc.se/m/Lorenz.php
+
 ## Topics
 
 ### First-order ODEs
