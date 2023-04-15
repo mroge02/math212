@@ -138,6 +138,7 @@ https://www.agtz.mathematik.uni-mainz.de/algebraische-geometrie/van-straten/eule
 - [Romik, Moving sofa problem](https://arxiv.org/abs/1606.08111)
 - [Chen *et al.*, Neural Ordinary Differential Equations (2019)](https://arxiv.org/pdf/1806.07366.pdf)
 - [Ryan Hynd, Hamilton-Jacobi equation (Oct 2021)](https://www.ams.org/journals/notices/202109/rnoti-p1457.pdf)
+- [Boyd J.P., https://epubs-siam-org.proxy.library.emory.edu/doi/epdf/10.1137/070681594](https://epubs-siam-org.proxy.library.emory.edu/doi/epdf/10.1137/070681594)
 
 ### Oregonator, BZ, OCRs; Oscillatory systems
 
