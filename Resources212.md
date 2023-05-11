@@ -4,6 +4,7 @@
 
 - Video on butterfly effect, https://www.youtube.com/watch?v=fDek6cYijxI (includes phase space)
 - Lorenz attractor: http://www.malinc.se/m/Lorenz.php
+- Etch-A-Sketch Lorenz attractor: https://twitter.com/VanHunterAdams/status/1646235380956397588
 
 ## Topics
 
