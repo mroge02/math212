@@ -67,6 +67,7 @@
 - J. Butcher, construction of RK methods, https://www.math.auckland.ac.nz/~butcher/CONFERENCES/JAPAN/KYUSHU/kyushu-slides.pdf
 - Enright, Verifying approximate solutions to differential equations, *Journal of Computational and Applied Mathematics* **185** (2006) 203 – 211. [PDF](https://reader.elsevier.com/reader/sd/pii/S037704270500110X?token=ED7F23AC0600593EECFD3FD6372E052A4A79D631D48BA611F0480A1A624D4ACF745FBACD666CBFFDE3781D9219E3F153&originRegion=us-east-1&originCreation=20221124153345)
 - Petzold, DAEs, http://web.mscsoftware.com/support/library/conf/adams/na/1995/UC950005.PDF
+- Hairer, Lubich, summary of numerical methods, https://na.uni-tuebingen.de/~lubich/pcam-ode.pdf
 
 ### Troubleshooting numerical solutions
 
