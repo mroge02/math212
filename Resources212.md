@@ -411,6 +411,8 @@ https://asa-scitation-org.proxy.library.emory.edu/doi/pdf/10.1121/1.1805143
  - Karman (vortex street), https://gdz.sub.uni-goettingen.de/id/PPN252457811_1911?tify=%7B%22pages%22%3A%5B536%5D%2C%22pan%22%3A%7B%22x%22%3A0.53%2C%22y%22%3A0.805%7D%2C%22view%22%3A%22info%22%2C%22zoom%22%3A0.593%7D
  - Hodgkin-Huxley model of action potentials in neurons, https://en.wikipedia.org/wiki/Hodgkin–Huxley_model
  - [Wolfram notebook archive (differential equations)](https://notebookarchive.org/search?q=Differential%20equations)
+ - [Young, Strings, Chains, and Ropes](https://epubs.siam.org/doi/abs/10.1137/050641910)
+ - [Antman, The Equations for Large Vibrations of Strings](https://www.tandfonline.com/doi/abs/10.1080/00029890.1980.11995034)
 
 
 ### SIMIODE Expo 2022
