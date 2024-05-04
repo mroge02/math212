@@ -296,6 +296,8 @@ Q:
 
 ### Linear systems
 
+- https://ericthewry.github.io/pdfs/imies.pdf
+- https://ericthewry.github.io/integer_matrices/
 - TBD
 
 ### Operator methods
